@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2020-08-03T15:47:27.977Z</updated>
+  <updated>2020-08-07T15:50:39.405Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://aliyunceo.github.io/2020/08/03/hello-world/"/>
-    <id>http://aliyunceo.github.io/2020/08/03/hello-world/</id>
-    <published>2020-08-03T15:47:27.977Z</published>
-    <updated>2020-08-03T15:47:27.977Z</updated>
+    <title>RabbitMQ安装说明</title>
+    <link href="http://aliyunceo.github.io/2020/08/07/rabbitmq-an-zhuang-shuo-ming/"/>
+    <id>http://aliyunceo.github.io/2020/08/07/rabbitmq-an-zhuang-shuo-ming/</id>
+    <published>2020-08-07T15:24:23.000Z</published>
+    <updated>2020-08-07T15:50:39.405Z</updated>
     
     <summary type="html">
     
@@ -29,13 +29,15 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;
+          &lt;h3 id=&quot;注意-请使用资料里提供的CentOS-7-x86-64-DVD-1810-iso-安装虚拟机&quot;&gt;&lt;a href=&quot;#注意-请使用资料里提供的CentOS-7-x86-64-DVD-1810-iso-安装虚拟机&quot; class=&quot;headerlink&quot;
         
       
     
     </summary>
     
     
+    
+      <category term="RabbitMQ" scheme="http://aliyunceo.github.io/tags/RabbitMQ/"/>
     
   </entry>
   
