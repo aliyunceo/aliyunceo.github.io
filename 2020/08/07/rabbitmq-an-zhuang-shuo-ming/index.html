@@ -502,10 +502,10 @@ daovoice('update');
 rpm -ivh erlang-18.3-1.el7.centos.x86_64.rpm
 </code></pre>
 <p>如果出现如下错误</p>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565526174751.png" alt="1565526174751"></p>
+<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565526174751.png"></p>
 <p>说明gblic 版本太低。我们可以查看当前机器的gblic 版本</p>
 <pre class=" language-shell"><code class="language-shell">strings /lib64/libc.so.6 | grep GLIBC</code></pre>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565526264426.png" alt="1565526264426"></p>
+<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565526264426.png"></p>
 <p>当前最高版本2.12，需要2.15.所以需要升级glibc</p>
 <ul>
 <li><p>使用yum更新安装依赖</p>
@@ -527,7 +527,7 @@ wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x
 <pre class=" language-shell"><code class="language-shell">strings /lib64/libc.so.6 | grep GLIBC</code></pre>
 </li>
 </ul>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565528746057.png" alt="1565528746057"></p>
+<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565528746057.png"></p>
 <h2 id="3-安装RabbitMQ"><a href="#3-安装RabbitMQ" class="headerlink" title="3. 安装RabbitMQ"></a>3. 安装RabbitMQ</h2><pre class=" language-sh"><code class="language-sh"># 安装
 rpm -ivh socat-1.7.3.2-5.el7.lux.x86_64.rpm
 
@@ -552,8 +552,8 @@ service rabbitmq-server restart # 重启服务</code></pre>
 cp rabbitmq.config.example /etc/rabbitmq/rabbitmq.config
 </code></pre>
 <h2 id="6-配置虚拟主机及用户"><a href="#6-配置虚拟主机及用户" class="headerlink" title="6. 配置虚拟主机及用户"></a>6. 配置虚拟主机及用户</h2><h3 id="6-1-用户角色"><a href="#6-1-用户角色" class="headerlink" title="6.1. 用户角色"></a>6.1. 用户角色</h3><p>RabbitMQ在安装好后，可以访问<code>http://ip地址:15672</code> ；其自带了guest/guest的用户名和密码；如果需要创建自定义用户；那么也可以登录管理界面后，如下操作：</p>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098043833.png" alt="1565098043833"> </p>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098315375.png" alt="1565098315375"></p>
+<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098043833.png"> </p>
+<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098315375.png"></p>
 <p><strong>角色说明</strong>：</p>
 <p>1、 超级管理员(administrator)</p>
 <p>可登陆管理控制台，可查看所有的信息，并且可以对用户，策略(policy)进行操作。</p>
@@ -566,9 +566,9 @@ cp rabbitmq.config.example /etc/rabbitmq/rabbitmq.config
 <p>5、 其他</p>
 <p>无法登陆管理控制台，通常就是普通的生产者和消费者。</p>
 <h3 id="6-2-Virtual-Hosts配置"><a href="#6-2-Virtual-Hosts配置" class="headerlink" title="6.2. Virtual Hosts配置"></a>6.2. Virtual Hosts配置</h3><p>像mysql拥有数据库的概念并且可以指定用户对库和表等操作的权限。RabbitMQ也有类似的权限管理；在RabbitMQ中可以虚拟消息服务器Virtual Host，每个Virtual Hosts相当于一个相对独立的RabbitMQ服务器，每个VirtualHost之间是相互隔离的。exchange、queue、message不能互通。 相当于mysql的db。Virtual Name一般以/开头。</p>
-<h4 id="6-2-1-创建Virtual-Hosts"><a href="#6-2-1-创建Virtual-Hosts" class="headerlink" title="6.2.1. 创建Virtual Hosts"></a>6.2.1. 创建Virtual Hosts</h4><p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098496482.png" alt="1565098496482"></p>
-<h4 id="6-2-2-设置Virtual-Hosts权限"><a href="#6-2-2-设置Virtual-Hosts权限" class="headerlink" title="6.2.2. 设置Virtual Hosts权限"></a>6.2.2. 设置Virtual Hosts权限</h4><p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098585317.png" alt="1565098585317"></p>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098719054.png" alt="1565098719054"></p>
+<h4 id="6-2-1-创建Virtual-Hosts"><a href="#6-2-1-创建Virtual-Hosts" class="headerlink" title="6.2.1. 创建Virtual Hosts"></a>6.2.1. 创建Virtual Hosts</h4><p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098496482.png"></p>
+<h4 id="6-2-2-设置Virtual-Hosts权限"><a href="#6-2-2-设置Virtual-Hosts权限" class="headerlink" title="6.2.2. 设置Virtual Hosts权限"></a>6.2.2. 设置Virtual Hosts权限</h4><p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098585317.png"></p>
+<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098719054.png"></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
