@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2020-08-07T16:13:27.711Z</updated>
+  <updated>2020-08-08T03:59:04.538Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://aliyunceo.github.io/2020/08/07/rabbitmq-an-zhuang-shuo-ming/"/>
     <id>http://aliyunceo.github.io/2020/08/07/rabbitmq-an-zhuang-shuo-ming/</id>
     <published>2020-08-07T15:24:23.000Z</published>
-    <updated>2020-08-07T16:13:27.711Z</updated>
+    <updated>2020-08-08T03:59:04.538Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,8 @@
       
         
         
-          &lt;h3 id=&quot;注意-请使用资料里提供的CentOS-7-x86-64-DVD-1810-iso-安装虚拟机&quot;&gt;&lt;a href=&quot;#注意-请使用资料里提供的CentOS-7-x86-64-DVD-1810-iso-安装虚拟机&quot; class=&quot;headerlink&quot;
+          &lt;h2 id=&quot;1-安装依赖环境&quot;&gt;&lt;a href=&quot;#1-安装依赖环境&quot; class=&quot;headerlink&quot; title=&quot;1. 安装依赖环境&quot;&gt;&lt;/a&gt;1. 安装依赖环境&lt;/h2&gt;&lt;p&gt;在线安装依赖环境：&lt;/p&gt;
+&lt;pre class=&quot;
         
       
     
