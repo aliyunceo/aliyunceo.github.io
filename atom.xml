@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2020-08-08T03:59:04.538Z</updated>
+  <updated>2020-08-08T14:41:31.342Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>消息中间件概述</title>
+    <link href="http://aliyunceo.github.io/2020/08/08/xiao-xi-zhong-jian-jian-gai-shu/"/>
+    <id>http://aliyunceo.github.io/2020/08/08/xiao-xi-zhong-jian-jian-gai-shu/</id>
+    <published>2020-08-08T13:40:30.000Z</published>
+    <updated>2020-08-08T14:41:31.342Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;1-1-什么是消息中间件&quot;&gt;&lt;a href=&quot;#1-1-什么是消息中间件&quot; class=&quot;headerlink&quot; title=&quot;1.1. 什么是消息中间件&quot;&gt;&lt;/a&gt;1.1. 什么是消息中间件&lt;/h2&gt;&lt;p&gt;MQ全称为Message
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="RabbitMQ" scheme="http://aliyunceo.github.io/tags/RabbitMQ/"/>
+    
+  </entry>
   
   <entry>
     <title>RabbitMQ安装说明</title>
