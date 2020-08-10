@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Spring Cloud概述</title>
+      <link href="/2020/08/10/spring-cloud-gai-shu/"/>
+      <url>/2020/08/10/spring-cloud-gai-shu/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-微服务架构"><a href="#1-微服务架构" class="headerlink" title="1.微服务架构"></a>1.微服务架构</h3><ul><li><p>微服务架构的演变</p><p><img src="/2020/08/10/spring-cloud-gai-shu/001.jpg"></p></li><li><p>微服务架构的描述</p><p>（1）微服务是系统架构上的一种设计风格,它的主旨是将一个原本独立的系统拆分成多个小型服务,这些小型服务都在各自独立的进程中运行,服务之间一般通过 HTTP 的 RESTfuL API 进行通信协作。</p><p>（2）被拆分成的每一个小型服务都围绕着系统中的某一项或些耦合度较高的业务功能进行构建,并且每个服务都维护着白身的数据存储、业务开发自动化测试案例以及独立部署机制。</p><p>（3）由于有了轻量级的通信协作基础,所以这些微服务可以使用不同的语言来编写。 </p></li></ul><p><img src="/2020/08/10/spring-cloud-gai-shu/002.jpg"></p><h3 id="2-Spring-Cloud"><a href="#2-Spring-Cloud" class="headerlink" title="2.Spring Cloud"></a>2.Spring Cloud</h3><ul><li><p>描述</p><p>Spring Cloud 是一系列框架的有序集合。</p><p>Spring Cloud 并没有重复制造轮子，它只是将目前各家公司开发的比较成熟、经得起实际考验的服务框架组合起来。</p><p>通过 Spring Boot 风格进行再封装屏蔽掉了复杂的配置和实现原理，最终给开发者留出了一套简单易懂、易部署和易维护的分布式系统开发工具包。</p><p>它利用Spring Boot的开发便利性巧妙地简化了分布式系统基础设施的开发，如服务发现注册、配置中心、消息总线、负载均衡、 断路器、数据监控等，都可以用Spring Boot的开发风格做到一键启动和部署。</p><p>Spring Cloud项目官方网址：<a href="https://spring.io/projects/spring-cloud">https://spring.io/projects/spring-cloud</a> </p></li></ul><p><img src="/2020/08/10/spring-cloud-gai-shu/003.jpg"></p><p>​         </p><p>​        Spring Cloud 版本命名方式采用了伦敦地铁站的名称，同时根据字母表的顺序来对应版本时间顺序，比如：最早的Release版本：Angel，第二个Release版本：Brixton，然后是Camden、    Dalston、Edgware，Finchley，Greenwich，Hoxton。</p><h3 id="3-Spring-Cloud与Dubbo对比"><a href="#3-Spring-Cloud与Dubbo对比" class="headerlink" title="3.Spring Cloud与Dubbo对比"></a>3.Spring Cloud与Dubbo对比</h3><ul><li>Spring Cloud 与 Dubbo 都是实现微服务有效的工具。</li><li>Dubbo 只是实现了服务治理，而 Spring Cloud 子项目分别覆盖了微服务架构下的众多部件。</li><li>Dubbo 使用 RPC 通讯协议，Spring Cloud 使用 RESTful 完成通信，Dubbo 效率略高于 Spring Cloud</li></ul><p><img src="/2020/08/10/spring-cloud-gai-shu/004.jpg"></p><h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>​    微服务就是将项目的各个模块拆分为可独立运行、部署、测试的架构设计风格。</p><p>​    Spring 公司将其他公司中微服务架构常用的组件整合起来，并使用 SpringBoot 简化其开发、配置。称为 Spring Cloud</p><p>​    Spring Cloud 与 Dubbo都是实现微服务有效的工具。Dubbo 性能更好，而 Spring Cloud 功能更全面。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Spring Cloud </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>RabbitMQ基本程序编写</title>
       <link href="/2020/08/09/rabbitmq-ji-ben-cheng-xu-bian-xie/"/>
       <url>/2020/08/09/rabbitmq-ji-ben-cheng-xu-bian-xie/</url>

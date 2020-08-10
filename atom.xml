@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2020-08-09T15:42:23.502Z</updated>
+  <updated>2020-08-10T07:44:01.135Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Spring Cloud概述</title>
+    <link href="http://aliyunceo.github.io/2020/08/10/spring-cloud-gai-shu/"/>
+    <id>http://aliyunceo.github.io/2020/08/10/spring-cloud-gai-shu/</id>
+    <published>2020-08-10T07:18:30.000Z</published>
+    <updated>2020-08-10T07:44:01.135Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-微服务架构&quot;&gt;&lt;a href=&quot;#1-微服务架构&quot; class=&quot;headerlink&quot; title=&quot;1.微服务架构&quot;&gt;&lt;/a&gt;1.微服务架构&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;微服务架构的演变&lt;/p&gt;
+&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Spring Cloud" scheme="http://aliyunceo.github.io/tags/Spring-Cloud/"/>
+    
+  </entry>
   
   <entry>
     <title>RabbitMQ基本程序编写</title>
