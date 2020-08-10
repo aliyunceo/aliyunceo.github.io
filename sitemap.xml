@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://aliyunceo.github.io/2020/08/10/eureka-pei-zhi-xiang-jie/</loc>
+    
+    <lastmod>2020-08-10</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aliyunceo.github.io/2020/08/10/spring-cloud-fu-wu-zhi-li/</loc>
+    
+    <lastmod>2020-08-10</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://aliyunceo.github.io/2020/08/10/spring-cloud-gai-shu/</loc>
     
     <lastmod>2020-08-10</lastmod>
@@ -86,6 +100,13 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>http://aliyunceo.github.io/tags/Spring-Cloud/</loc>
+    <lastmod>2020-08-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/RabbitMQ/</loc>

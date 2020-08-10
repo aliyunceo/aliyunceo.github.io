@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2020-08-10T07:44:01.135Z</updated>
+  <updated>2020-08-10T15:41:01.841Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Eureka配置详解</title>
+    <link href="http://aliyunceo.github.io/2020/08/10/eureka-pei-zhi-xiang-jie/"/>
+    <id>http://aliyunceo.github.io/2020/08/10/eureka-pei-zhi-xiang-jie/</id>
+    <published>2020-08-10T15:37:41.000Z</published>
+    <updated>2020-08-10T15:41:01.841Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Euraka配置详解&quot;&gt;&lt;a href=&quot;#Euraka配置详解&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="Spring-Cloud" scheme="http://aliyunceo.github.io/tags/Spring-Cloud/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spring Cloud服务治理</title>
+    <link href="http://aliyunceo.github.io/2020/08/10/spring-cloud-fu-wu-zhi-li/"/>
+    <id>http://aliyunceo.github.io/2020/08/10/spring-cloud-fu-wu-zhi-li/</id>
+    <published>2020-08-10T07:56:32.000Z</published>
+    <updated>2020-08-10T07:56:32.674Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Spring Cloud概述</title>

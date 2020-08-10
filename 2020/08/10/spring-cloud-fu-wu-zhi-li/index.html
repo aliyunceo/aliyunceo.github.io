@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Spring Cloud概述, 知否">
+    <meta name="keywords" content="Spring Cloud服务治理, 知否">
 	<meta name="baidu-site-verification" content="xvbAoexk6z" />
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Spring Cloud概述 | 知否</title>
+    <title>Spring Cloud服务治理 | 知否</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -318,12 +318,12 @@ daovoice('update');
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Spring Cloud概述</h1>
+                    <h1 class="description center-align post-title">Spring Cloud服务治理</h1>
                 </div>
             </div>
         </div>
@@ -438,13 +438,9 @@ daovoice('update');
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Spring-Cloud/">
-                                <span class="chip bg-color">Spring Cloud</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -470,14 +466,14 @@ daovoice('update');
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    714
+                    52
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
 
@@ -492,39 +488,7 @@ daovoice('update');
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-微服务架构"><a href="#1-微服务架构" class="headerlink" title="1.微服务架构"></a>1.微服务架构</h3><ul>
-<li><p>微服务架构的演变</p>
-<p><img src="/2020/08/10/spring-cloud-gai-shu/001.jpg"></p>
-</li>
-<li><p>微服务架构的描述</p>
-<p>（1）微服务是系统架构上的一种设计风格,它的主旨是将一个原本独立的系统拆分成多个小型服务,这些小型服务都在各自独立的进程中运行,服务之间一般通过 HTTP 的 RESTfuL API 进行通信协作。</p>
-<p>（2）被拆分成的每一个小型服务都围绕着系统中的某一项或些耦合度较高的业务功能进行构建,并且每个服务都维护着白身的数据存储、业务开发自动化测试案例以及独立部署机制。</p>
-<p>（3）由于有了轻量级的通信协作基础,所以这些微服务可以使用不同的语言来编写。 </p>
-</li>
-</ul>
-<p><img src="/2020/08/10/spring-cloud-gai-shu/002.jpg"></p>
-<h3 id="2-Spring-Cloud"><a href="#2-Spring-Cloud" class="headerlink" title="2.Spring Cloud"></a>2.Spring Cloud</h3><ul>
-<li><p>描述</p>
-<p>Spring Cloud 是一系列框架的有序集合。</p>
-<p>Spring Cloud 并没有重复制造轮子，它只是将目前各家公司开发的比较成熟、经得起实际考验的服务框架组合起来。</p>
-<p>通过 Spring Boot 风格进行再封装屏蔽掉了复杂的配置和实现原理，最终给开发者留出了一套简单易懂、易部署和易维护的分布式系统开发工具包。</p>
-<p>它利用Spring Boot的开发便利性巧妙地简化了分布式系统基础设施的开发，如服务发现注册、配置中心、消息总线、负载均衡、 断路器、数据监控等，都可以用Spring Boot的开发风格做到一键启动和部署。</p>
-<p>Spring Cloud项目官方网址：<a target="_blank" rel="noopener" href="https://spring.io/projects/spring-cloud">https://spring.io/projects/spring-cloud</a> </p>
-</li>
-</ul>
-<p><img src="/2020/08/10/spring-cloud-gai-shu/003.jpg"></p>
-<p>​         </p>
-<p>​        Spring Cloud 版本命名方式采用了伦敦地铁站的名称，同时根据字母表的顺序来对应版本时间顺序，比如：最早的Release版本：Angel，第二个Release版本：Brixton，然后是Camden、    Dalston、Edgware，Finchley，Greenwich，Hoxton。</p>
-<h3 id="3-Spring-Cloud与Dubbo对比"><a href="#3-Spring-Cloud与Dubbo对比" class="headerlink" title="3.Spring Cloud与Dubbo对比"></a>3.Spring Cloud与Dubbo对比</h3><ul>
-<li>Spring Cloud 与 Dubbo 都是实现微服务有效的工具。</li>
-<li>Dubbo 只是实现了服务治理，而 Spring Cloud 子项目分别覆盖了微服务架构下的众多部件。</li>
-<li>Dubbo 使用 RPC 通讯协议，Spring Cloud 使用 RESTful 完成通信，Dubbo 效率略高于 Spring Cloud</li>
-</ul>
-<p><img src="/2020/08/10/spring-cloud-gai-shu/004.jpg"></p>
-<h4 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h4><p>​    微服务就是将项目的各个模块拆分为可独立运行、部署、测试的架构设计风格。</p>
-<p>​    Spring 公司将其他公司中微服务架构常用的组件整合起来，并使用 SpringBoot 简化其开发、配置。称为 Spring Cloud</p>
-<p>​    Spring Cloud 与 Dubbo都是实现微服务有效的工具。Dubbo 性能更好，而 Spring Cloud 功能更全面。</p>
-<script>
+                <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -567,7 +531,7 @@ daovoice('update');
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://aliyunceo.github.io/2020/08/10/spring-cloud-gai-shu/">http://aliyunceo.github.io/2020/08/10/spring-cloud-gai-shu/</a>
+                    <a href="http://aliyunceo.github.io/2020/08/10/spring-cloud-fu-wu-zhi-li/">http://aliyunceo.github.io/2020/08/10/spring-cloud-fu-wu-zhi-li/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -604,11 +568,7 @@ daovoice('update');
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/Spring-Cloud/">
-                                    <span class="chip bg-color">Spring Cloud</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -824,22 +784,24 @@ daovoice('update');
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/10/spring-cloud-fu-wu-zhi-li/">
+                <a href="/2020/08/10/eureka-pei-zhi-xiang-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Spring Cloud服务治理">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="Eureka配置详解">
                         
-                        <span class="card-title">Spring Cloud服务治理</span>
+                        <span class="card-title">Eureka配置详解</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-        document.querySelectorAll('.github-emoji')
-          .forEach(el => {
-            if (!el.dataset.src) { return
+                            Euraka配置详解Eureka包含四个部分的配置
+
+instance：当前Eureka Instance实例信息配置
+client：Eureka Client客户端特性配置
+server：Eureka Server注册中心特性配置
+das
                         
                     </div>
                     <div class="publish-info">
@@ -855,6 +817,14 @@ daovoice('update');
                     </div>
                 </div>
                 
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Spring-Cloud/">
+                        <span class="chip bg-color">Spring-Cloud</span>
+                    </a>
+                    
+                </div>
+                
             </div>
         </div>
         
@@ -864,28 +834,29 @@ daovoice('update');
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/09/rabbitmq-ji-ben-cheng-xu-bian-xie/">
+                <a href="/2020/08/10/spring-cloud-gai-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="RabbitMQ基本程序编写">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Spring Cloud概述">
                         
-                        <span class="card-title">RabbitMQ基本程序编写</span>
+                        <span class="card-title">Spring Cloud概述</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            3.1. 搭建示例工程3.1.1. 创建工程
+                            1.微服务架构
+微服务架构的演变
 
-3.1.2. 添加依赖往aliyun-rabbitmq的pom.xml文件中添加如下依赖：
-        &lt;dependency>
-            &lt;groupId>co
+
+微服务架构的描述
+（1）微服务是系统架构上的一种设计风格,它的主旨是将一个原本独立的系统拆分成多个小型服务,这些小型服务都在各自独立的进程中运行,服务之间一般通过 HTTP 的 RESTfuL API 
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-10
                             </span>
                         <span class="publish-author">
                             
@@ -898,8 +869,8 @@ daovoice('update');
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/RabbitMQ/">
-                        <span class="chip bg-color">RabbitMQ</span>
+                    <a href="/tags/Spring-Cloud/">
+                        <span class="chip bg-color">Spring Cloud</span>
                     </a>
                     
                 </div>
