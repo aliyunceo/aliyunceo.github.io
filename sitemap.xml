@@ -9,13 +9,6 @@
   </url>
   
   <url>
-    <loc>http://aliyunceo.github.io/2020/08/10/spring-cloud-fu-wu-zhi-li/</loc>
-    
-    <lastmod>2020-08-10</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://aliyunceo.github.io/2020/08/10/spring-cloud-gai-shu/</loc>
     
     <lastmod>2020-08-10</lastmod>
@@ -102,13 +95,6 @@
 
   
   <url>
-    <loc>http://aliyunceo.github.io/tags/Spring-Cloud/</loc>
-    <lastmod>2020-08-10</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://aliyunceo.github.io/tags/RabbitMQ/</loc>
     <lastmod>2020-08-10</lastmod>
     <changefreq>daily</changefreq>
@@ -116,7 +102,7 @@
   </url>
   
   <url>
-    <loc>http://aliyunceo.github.io/tags/Spring-Cloud/</loc>
+    <loc>http://aliyunceo.github.io/tags/SpringCloud/</loc>
     <lastmod>2020-08-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

@@ -14,22 +14,9 @@
       
         <tags>
             
-            <tag> Spring-Cloud </tag>
+            <tag> SpringCloud </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Spring Cloud服务治理</title>
-      <link href="/2020/08/10/spring-cloud-fu-wu-zhi-li/"/>
-      <url>/2020/08/10/spring-cloud-fu-wu-zhi-li/</url>
-      
-        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
       
     </entry>
     
@@ -46,7 +33,7 @@
       
         <tags>
             
-            <tag> Spring Cloud </tag>
+            <tag> SpringCloud </tag>
             
         </tags>
       
