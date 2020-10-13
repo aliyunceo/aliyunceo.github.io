@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="RabbitMQ安装说明, 知否">
+    <meta name="keywords" content="sql函数, 知否">
 	<meta name="baidu-site-verification" content="xvbAoexk6z" />
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>RabbitMQ安装说明 | 知否</title>
+    <title>sql函数 | 知否</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -318,12 +318,12 @@ daovoice('update');
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">RabbitMQ安装说明</h1>
+                    <h1 class="description center-align post-title">sql函数</h1>
                 </div>
             </div>
         </div>
@@ -440,8 +440,8 @@ daovoice('update');
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/RabbitMQ/">
-                                <span class="chip bg-color">RabbitMQ</span>
+                            <a href="/tags/Oracle/">
+                                <span class="chip bg-color">Oracle</span>
                             </a>
                         
                     </div>
@@ -456,28 +456,28 @@ daovoice('update');
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-07
+                    2020-10-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-08
+                    2020-10-10
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    968
+                    491
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -492,83 +492,46 @@ daovoice('update');
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-安装依赖环境"><a href="#1-安装依赖环境" class="headerlink" title="1. 安装依赖环境"></a>1. 安装依赖环境</h2><p>在线安装依赖环境：</p>
-<pre class=" language-shell"><code class="language-shell">yum install build-essential openssl openssl-devel unixODBC unixODBC-devel make gcc gcc-c++ kernel-devel m4 ncurses-devel tk tc xz
-</code></pre>
-<h2 id="2-安装Erlang"><a href="#2-安装Erlang" class="headerlink" title="2. 安装Erlang"></a>2. 安装Erlang</h2><p>上传</p>
-<p>erlang-18.3-1.el7.centos.x86_64.rpm<br>socat-1.7.3.2-5.el7.lux.x86_64.rpm<br>rabbitmq-server-3.6.5-1.noarch.rpm</p>
-<pre class=" language-sh"><code class="language-sh">
-# 安装
-rpm -ivh erlang-18.3-1.el7.centos.x86_64.rpm
-</code></pre>
-<p>如果出现如下错误</p>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565526174751.png"></p>
-<p>说明gblic 版本太低。我们可以查看当前机器的gblic 版本</p>
-<pre class=" language-shell"><code class="language-shell">strings /lib64/libc.so.6 | grep GLIBC</code></pre>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565526264426.png"></p>
-<p>当前最高版本2.12，需要2.15.所以需要升级glibc</p>
-<ul>
-<li><p>使用yum更新安装依赖</p>
-<pre class=" language-shell"><code class="language-shell">sudo yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make -y</code></pre>
-</li>
-<li><p>下载rpm包</p>
-<pre class=" language-shell"><code class="language-shell">wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-utils-2.17-55.el6.x86_64.rpm &
-wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-static-2.17-55.el6.x86_64.rpm &
-wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-2.17-55.el6.x86_64.rpm &
-wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-common-2.17-55.el6.x86_64.rpm &
-wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-devel-2.17-55.el6.x86_64.rpm &
-wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-headers-2.17-55.el6.x86_64.rpm &
-wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/nscd-2.17-55.el6.x86_64.rpm &</code></pre>
-</li>
-<li><p>安装rpm包</p>
-<pre class=" language-shell"><code class="language-shell">sudo rpm -Uvh *-2.17-55.el6.x86_64.rpm --force --nodeps</code></pre>
-</li>
-<li><p>安装完毕后再查看glibc版本,发现glibc版本已经到2.17了</p>
-<pre class=" language-shell"><code class="language-shell">strings /lib64/libc.so.6 | grep GLIBC</code></pre>
-</li>
-</ul>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565528746057.png"></p>
-<h2 id="3-安装RabbitMQ"><a href="#3-安装RabbitMQ" class="headerlink" title="3. 安装RabbitMQ"></a>3. 安装RabbitMQ</h2><pre class=" language-sh"><code class="language-sh"># 安装
-rpm -ivh socat-1.7.3.2-5.el7.lux.x86_64.rpm
-
-# 安装
-rpm -ivh rabbitmq-server-3.6.5-1.noarch.rpm
-</code></pre>
-<h2 id="4-开启管理界面及配置"><a href="#4-开启管理界面及配置" class="headerlink" title="4. 开启管理界面及配置"></a>4. 开启管理界面及配置</h2><pre class=" language-sh"><code class="language-sh"># 开启管理界面
-rabbitmq-plugins enable rabbitmq_management
-# 修改默认配置信息
-vim /usr/lib/rabbitmq/lib/rabbitmq_server-3.6.5/ebin/rabbit.app 
-# 比如修改密码、配置等等，例如：loopback_users 中的 <<"guest">>,只保留guest
-</code></pre>
-<h2 id="5-启动"><a href="#5-启动" class="headerlink" title="5. 启动"></a>5. 启动</h2><pre class=" language-sh"><code class="language-sh">
-service rabbitmq-server start # 启动服务
-service rabbitmq-server stop # 停止服务
-service rabbitmq-server restart # 重启服务</code></pre>
-<ul>
-<li>设置配置文件</li>
-</ul>
-<pre class=" language-shell"><code class="language-shell">cd /usr/share/doc/rabbitmq-server-3.6.5/
-
-cp rabbitmq.config.example /etc/rabbitmq/rabbitmq.config
-</code></pre>
-<h2 id="6-配置虚拟主机及用户"><a href="#6-配置虚拟主机及用户" class="headerlink" title="6. 配置虚拟主机及用户"></a>6. 配置虚拟主机及用户</h2><h3 id="6-1-用户角色"><a href="#6-1-用户角色" class="headerlink" title="6.1. 用户角色"></a>6.1. 用户角色</h3><p>RabbitMQ在安装好后，可以访问<code>http://ip地址:15672</code> ；其自带了guest/guest的用户名和密码；如果需要创建自定义用户；那么也可以登录管理界面后，如下操作：</p>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098043833.png"> </p>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098315375.png"></p>
-<p><strong>角色说明</strong>：</p>
-<p>1、 超级管理员(administrator)</p>
-<p>可登陆管理控制台，可查看所有的信息，并且可以对用户，策略(policy)进行操作。</p>
-<p>2、 监控者(monitoring)</p>
-<p>可登陆管理控制台，同时可以查看rabbitmq节点的相关信息(进程数，内存使用情况，磁盘使用情况等)</p>
-<p>3、 策略制定者(policymaker)</p>
-<p>可登陆管理控制台, 同时可以对policy进行管理。但无法查看节点的相关信息(上图红框标识的部分)。</p>
-<p>4、 普通管理者(management)</p>
-<p>仅可登陆管理控制台，无法看到节点信息，也无法对策略进行管理。</p>
-<p>5、 其他</p>
-<p>无法登陆管理控制台，通常就是普通的生产者和消费者。</p>
-<h3 id="6-2-Virtual-Hosts配置"><a href="#6-2-Virtual-Hosts配置" class="headerlink" title="6.2. Virtual Hosts配置"></a>6.2. Virtual Hosts配置</h3><p>像mysql拥有数据库的概念并且可以指定用户对库和表等操作的权限。RabbitMQ也有类似的权限管理；在RabbitMQ中可以虚拟消息服务器Virtual Host，每个Virtual Hosts相当于一个相对独立的RabbitMQ服务器，每个VirtualHost之间是相互隔离的。exchange、queue、message不能互通。 相当于mysql的db。Virtual Name一般以/开头。</p>
-<h4 id="6-2-1-创建Virtual-Hosts"><a href="#6-2-1-创建Virtual-Hosts" class="headerlink" title="6.2.1. 创建Virtual Hosts"></a>6.2.1. 创建Virtual Hosts</h4><p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098496482.png"></p>
-<h4 id="6-2-2-设置Virtual-Hosts权限"><a href="#6-2-2-设置Virtual-Hosts权限" class="headerlink" title="6.2.2. 设置Virtual Hosts权限"></a>6.2.2. 设置Virtual Hosts权限</h4><p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098585317.png"></p>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098719054.png"></p>
+                <p><img src="/2020/10/10/sql-han-shu/blog\blog\source_posts\sql函数\1.png"></p>
+<h3 id="一、sql函数的功能"><a href="#一、sql函数的功能" class="headerlink" title="一、sql函数的功能"></a>一、sql函数的功能</h3><p>​    进行数值计算</p>
+<p>​    修改单个数据项</p>
+<p>​    处理成组行的输出</p>
+<p>​    指定日期和数字的显示格式</p>
+<p>​    转换列数据类型</p>
+<h3 id="二、sql函数的两种类型"><a href="#二、sql函数的两种类型" class="headerlink" title="二、sql函数的两种类型"></a>二、sql函数的两种类型</h3><p><img src="/2020/10/10/sql-han-shu/blog\blog\source_posts\sql函数\2.png"></p>
+<p>1、单行函数：只处理单个行，并且每行返回一个结果。</p>
+<p>​        字符函数</p>
+<p>​        lower 将字母字符值转换为小写</p>
+<p>​        upper 将字母字符值转换为大写</p>
+<p>​        initcap 将字母字符转换为每个单词首字母大写，其他所有的字母为小写</p>
+<p>​        concap 将第一个字符值与第二个字符值相连；等同与连接运算符</p>
+<p>​        substr 返回字符值中的指定字符 从第m个字符开始，长度为n个字符  m为负数，则从字符值的末尾开始算起</p>
+<p>​        length 返回表达式中的字符数  </p>
+<p>​        instr 返回指定字符串的数字位置</p>
+<p>​        lpad 将字符值右对齐排列，然后左侧填充字符，以使总字符宽度为n</p>
+<p>​        rpad将字符串值左对齐排列，然后右侧填充字符，以使总字符宽度为n</p>
+<p>​        trim 可以从一个字符串中截去或者尾部的字符</p>
+<p>​        replace 搜索字符串的文本格式，如果找到，用指定的替换字符串替换它</p>
+<p><img src="/2020/10/10/sql-han-shu/blog\blog\source_posts\sql函数\3.png"></p>
+<p>​        数字函数 </p>
+<p><img src="/2020/10/10/sql-han-shu/blog\blog\source_posts\sql函数\4.png"></p>
+<p>​        日期函数</p>
+<p>​                                          <img src="/2020/10/10/sql-han-shu/blog\blog\source_posts\sql函数\5.png"></p>
+<p>​        转换函数</p>
+<p>​                                    <img src="/2020/10/10/sql-han-shu/blog\blog\source_posts\sql函数\6.png"></p>
+<p>​        常规函数</p>
+<p>​                                 <img src="/2020/10/10/sql-han-shu/blog\blog\source_posts\sql函数\7.png"> </p>
+<p>​                         <img src="/2020/10/10/sql-han-shu/blog\blog\source_posts\sql函数\8.png"></p>
+<p><img src="/2020/10/10/sql-han-shu/blog\blog\source_posts\sql函数\5.png"></p>
+<p><img src="/2020/10/10/sql-han-shu/blog\blog\source_posts\sql函数\5.png"></p>
+<p><img src="/2020/10/10/sql-han-shu/blog\blog\source_posts\sql函数\9.png"></p>
+<p><img src="/2020/10/10/sql-han-shu/blog\blog\source_posts\sql函数\10.png"></p>
+<p><img src="/2020/10/10/sql-han-shu/blog\blog\source_posts\sql函数\11.png"></p>
+<p>单行函数是处理数据项的。他们接受一个或多个参数。每个行返回一个值（参数可以是用户提供的常数、变量值、列名、表达式）</p>
+<p>​    可以用在select、where和order by 子句中，也可以嵌套</p>
+<p><img src="/2020/10/10/sql-han-shu/blog\blog\source_posts\sql函数\12.png"></p>
+<p>2、多行函数：这些函数可以处理成组的行，从而每行返回一个结果（分组函数）</p>
+<p>​        <img src="/2020/10/10/sql-han-shu/blog\blog\source_posts\sql函数\3.png"></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -612,7 +575,7 @@ cp rabbitmq.config.example /etc/rabbitmq/rabbitmq.config
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://aliyunceo.github.io/2020/08/07/rabbitmq-an-zhuang-shuo-ming/">http://aliyunceo.github.io/2020/08/07/rabbitmq-an-zhuang-shuo-ming/</a>
+                    <a href="http://aliyunceo.github.io/2020/10/10/sql-han-shu/">http://aliyunceo.github.io/2020/10/10/sql-han-shu/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -650,8 +613,8 @@ cp rabbitmq.config.example /etc/rabbitmq/rabbitmq.config
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/RabbitMQ/">
-                                    <span class="chip bg-color">RabbitMQ</span>
+                                <a href="/tags/Oracle/">
+                                    <span class="chip bg-color">Oracle</span>
                                 </a>
                             
                         </div>
@@ -869,26 +832,26 @@ cp rabbitmq.config.example /etc/rabbitmq/rabbitmq.config
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/08/xiao-xi-zhong-jian-jian-gai-shu/">
+                <a href="/2020/10/12/dql-ddl-dml-dcl-de-qu-bie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="消息中间件概述">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="DQL、DDL、DML、DCL的区别">
                         
-                        <span class="card-title">消息中间件概述</span>
+                        <span class="card-title">DQL、DDL、DML、DCL的区别</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.1. 什么是消息中间件MQ全称为Message Queue，消息队列是应用程序和应用程序之间的通信方法，是在消息的传输过程中保存消息的容器，多用于分布式系统之间进行通信。
-
-总结MQ，消息队列，存储消息的中间件分布式系统通信两种方式：直
+                            SQL结构化查询语言包含6个部分
+\1.\*数据查询语言（DQL: Data Query Language）***
+数据检索语句，用于从表中获取数据。通常最常用的为保留字SELECT,并且常与FROM子句、WHERE子句组成查询SQL查询语
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-12
                         </span>
                         <span class="publish-author">
                             
@@ -901,8 +864,8 @@ cp rabbitmq.config.example /etc/rabbitmq/rabbitmq.config
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/RabbitMQ/">
-                        <span class="chip bg-color">RabbitMQ</span>
+                    <a href="/tags/sql/">
+                        <span class="chip bg-color">sql</span>
                     </a>
                     
                 </div>
@@ -913,28 +876,27 @@ cp rabbitmq.config.example /etc/rabbitmq/rabbitmq.config
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/">
+                <a href="/2020/10/10/tapestry-ji-chu-zhi-shi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="RabbitMQ安装说明">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Tapestry基础知识">
                         
-                        <span class="card-title">RabbitMQ安装说明</span>
+                        <span class="card-title">Tapestry基础知识</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1. 安装依赖环境在线安装依赖环境：
-yum install build-essential openssl openssl-devel unixODBC unixODBC-devel make gcc gcc-c++ kernel-dev
+                            一、Tapestry Web概述​    Tapestry是一种基于java的Web应用程序框架。Tapestry采用了组件的概念。程序员可以应用现有的组件或自定义应用程序相关的组件来构建应用程序。相对与现有的其他Web应用程序框架而言，应
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-10
                             </span>
                         <span class="publish-author">
                             
@@ -944,12 +906,11 @@ yum install build-essential openssl openssl-devel unixODBC unixODBC-devel make g
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/RabbitMQ/">
-                        <span class="chip bg-color">RabbitMQ</span>
+                    <a href="/tags/Tapestry/">
+                        <span class="chip bg-color">Tapestry</span>
                     </a>
                     
                 </div>

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="RabbitMQ安装说明, 知否">
+    <meta name="keywords" content="DQL、DDL、DML、DCL的区别, 知否">
 	<meta name="baidu-site-verification" content="xvbAoexk6z" />
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>RabbitMQ安装说明 | 知否</title>
+    <title>DQL、DDL、DML、DCL的区别 | 知否</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -318,12 +318,12 @@ daovoice('update');
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">RabbitMQ安装说明</h1>
+                    <h1 class="description center-align post-title">DQL、DDL、DML、DCL的区别</h1>
                 </div>
             </div>
         </div>
@@ -440,8 +440,8 @@ daovoice('update');
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/RabbitMQ/">
-                                <span class="chip bg-color">RabbitMQ</span>
+                            <a href="/tags/sql/">
+                                <span class="chip bg-color">sql</span>
                             </a>
                         
                     </div>
@@ -456,28 +456,28 @@ daovoice('update');
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-08-07
+                    2020-10-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-08-08
+                    2020-10-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    968
+                    377
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -492,83 +492,25 @@ daovoice('update');
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="1-安装依赖环境"><a href="#1-安装依赖环境" class="headerlink" title="1. 安装依赖环境"></a>1. 安装依赖环境</h2><p>在线安装依赖环境：</p>
-<pre class=" language-shell"><code class="language-shell">yum install build-essential openssl openssl-devel unixODBC unixODBC-devel make gcc gcc-c++ kernel-devel m4 ncurses-devel tk tc xz
-</code></pre>
-<h2 id="2-安装Erlang"><a href="#2-安装Erlang" class="headerlink" title="2. 安装Erlang"></a>2. 安装Erlang</h2><p>上传</p>
-<p>erlang-18.3-1.el7.centos.x86_64.rpm<br>socat-1.7.3.2-5.el7.lux.x86_64.rpm<br>rabbitmq-server-3.6.5-1.noarch.rpm</p>
-<pre class=" language-sh"><code class="language-sh">
-# 安装
-rpm -ivh erlang-18.3-1.el7.centos.x86_64.rpm
-</code></pre>
-<p>如果出现如下错误</p>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565526174751.png"></p>
-<p>说明gblic 版本太低。我们可以查看当前机器的gblic 版本</p>
-<pre class=" language-shell"><code class="language-shell">strings /lib64/libc.so.6 | grep GLIBC</code></pre>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565526264426.png"></p>
-<p>当前最高版本2.12，需要2.15.所以需要升级glibc</p>
-<ul>
-<li><p>使用yum更新安装依赖</p>
-<pre class=" language-shell"><code class="language-shell">sudo yum install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gcc make -y</code></pre>
-</li>
-<li><p>下载rpm包</p>
-<pre class=" language-shell"><code class="language-shell">wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-utils-2.17-55.el6.x86_64.rpm &
-wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-static-2.17-55.el6.x86_64.rpm &
-wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-2.17-55.el6.x86_64.rpm &
-wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-common-2.17-55.el6.x86_64.rpm &
-wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-devel-2.17-55.el6.x86_64.rpm &
-wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/glibc-headers-2.17-55.el6.x86_64.rpm &
-wget http://copr-be.cloud.fedoraproject.org/results/mosquito/myrepo-el6/epel-6-x86_64/glibc-2.17-55.fc20/nscd-2.17-55.el6.x86_64.rpm &</code></pre>
-</li>
-<li><p>安装rpm包</p>
-<pre class=" language-shell"><code class="language-shell">sudo rpm -Uvh *-2.17-55.el6.x86_64.rpm --force --nodeps</code></pre>
-</li>
-<li><p>安装完毕后再查看glibc版本,发现glibc版本已经到2.17了</p>
-<pre class=" language-shell"><code class="language-shell">strings /lib64/libc.so.6 | grep GLIBC</code></pre>
-</li>
-</ul>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565528746057.png"></p>
-<h2 id="3-安装RabbitMQ"><a href="#3-安装RabbitMQ" class="headerlink" title="3. 安装RabbitMQ"></a>3. 安装RabbitMQ</h2><pre class=" language-sh"><code class="language-sh"># 安装
-rpm -ivh socat-1.7.3.2-5.el7.lux.x86_64.rpm
-
-# 安装
-rpm -ivh rabbitmq-server-3.6.5-1.noarch.rpm
-</code></pre>
-<h2 id="4-开启管理界面及配置"><a href="#4-开启管理界面及配置" class="headerlink" title="4. 开启管理界面及配置"></a>4. 开启管理界面及配置</h2><pre class=" language-sh"><code class="language-sh"># 开启管理界面
-rabbitmq-plugins enable rabbitmq_management
-# 修改默认配置信息
-vim /usr/lib/rabbitmq/lib/rabbitmq_server-3.6.5/ebin/rabbit.app 
-# 比如修改密码、配置等等，例如：loopback_users 中的 <<"guest">>,只保留guest
-</code></pre>
-<h2 id="5-启动"><a href="#5-启动" class="headerlink" title="5. 启动"></a>5. 启动</h2><pre class=" language-sh"><code class="language-sh">
-service rabbitmq-server start # 启动服务
-service rabbitmq-server stop # 停止服务
-service rabbitmq-server restart # 重启服务</code></pre>
-<ul>
-<li>设置配置文件</li>
-</ul>
-<pre class=" language-shell"><code class="language-shell">cd /usr/share/doc/rabbitmq-server-3.6.5/
-
-cp rabbitmq.config.example /etc/rabbitmq/rabbitmq.config
-</code></pre>
-<h2 id="6-配置虚拟主机及用户"><a href="#6-配置虚拟主机及用户" class="headerlink" title="6. 配置虚拟主机及用户"></a>6. 配置虚拟主机及用户</h2><h3 id="6-1-用户角色"><a href="#6-1-用户角色" class="headerlink" title="6.1. 用户角色"></a>6.1. 用户角色</h3><p>RabbitMQ在安装好后，可以访问<code>http://ip地址:15672</code> ；其自带了guest/guest的用户名和密码；如果需要创建自定义用户；那么也可以登录管理界面后，如下操作：</p>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098043833.png"> </p>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098315375.png"></p>
-<p><strong>角色说明</strong>：</p>
-<p>1、 超级管理员(administrator)</p>
-<p>可登陆管理控制台，可查看所有的信息，并且可以对用户，策略(policy)进行操作。</p>
-<p>2、 监控者(monitoring)</p>
-<p>可登陆管理控制台，同时可以查看rabbitmq节点的相关信息(进程数，内存使用情况，磁盘使用情况等)</p>
-<p>3、 策略制定者(policymaker)</p>
-<p>可登陆管理控制台, 同时可以对policy进行管理。但无法查看节点的相关信息(上图红框标识的部分)。</p>
-<p>4、 普通管理者(management)</p>
-<p>仅可登陆管理控制台，无法看到节点信息，也无法对策略进行管理。</p>
-<p>5、 其他</p>
-<p>无法登陆管理控制台，通常就是普通的生产者和消费者。</p>
-<h3 id="6-2-Virtual-Hosts配置"><a href="#6-2-Virtual-Hosts配置" class="headerlink" title="6.2. Virtual Hosts配置"></a>6.2. Virtual Hosts配置</h3><p>像mysql拥有数据库的概念并且可以指定用户对库和表等操作的权限。RabbitMQ也有类似的权限管理；在RabbitMQ中可以虚拟消息服务器Virtual Host，每个Virtual Hosts相当于一个相对独立的RabbitMQ服务器，每个VirtualHost之间是相互隔离的。exchange、queue、message不能互通。 相当于mysql的db。Virtual Name一般以/开头。</p>
-<h4 id="6-2-1-创建Virtual-Hosts"><a href="#6-2-1-创建Virtual-Hosts" class="headerlink" title="6.2.1. 创建Virtual Hosts"></a>6.2.1. 创建Virtual Hosts</h4><p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098496482.png"></p>
-<h4 id="6-2-2-设置Virtual-Hosts权限"><a href="#6-2-2-设置Virtual-Hosts权限" class="headerlink" title="6.2.2. 设置Virtual Hosts权限"></a>6.2.2. 设置Virtual Hosts权限</h4><p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098585317.png"></p>
-<p><img src="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/assets/1565098719054.png"></p>
+                <p><strong>SQL结构化查询语言包含6个部分</strong></p>
+<p><strong><em>\</em>1.\</strong>*<em>数据查询语言（DQL: Data Query Language）***</em></p>
+<p>数据检索语句，用于从表中获取数据。通常最常用的为保留字SELECT,并且常与FROM子句、WHERE子句组成查询SQL查询语句。</p>
+<p>语法：</p>
+<p>  SELECT &lt;字段名&gt; FROM &lt;表或视图名&gt; WHERE &lt;查询条件&gt;;</p>
+<p><strong><em>2.数据操纵语言（DML：Data Manipulation Language）</em></strong></p>
+<p>主要用来对数据库的数据进行一些操作，常用的就是INSERT、UPDATE、DELETE。</p>
+<p>语法：</p>
+<p>  INSERT INTO &lt;表名&gt;(列1,列2,…) VALUES (值1,值2,…);</p>
+<p>  UPDATE &lt;表名&gt; SET &lt;列名&gt;=新值 WHERE &lt;列名&gt;=某值;</p>
+<p>  DELETE FROM &lt;表名&gt; WHERE &lt;列名&gt;=某值;</p>
+<p><strong><em>\</em>3.事务处理语言（DPL）**</strong></p>
+<p>事务处理语句能确保被DML语句影响的表的所有行及时得以更新。TPL语句包括BEGIN TRANSACTION、COMMIT和ROLLBACK。</p>
+<p><strong><em>\</em>4.数据控制语言（DCL）**</strong></p>
+<p>通过GRANT和REVOKE，确定单个用户或用户组对数据库对象的访问权限。</p>
+<p><strong><em>\</em>5.数据定义语言（DDL）**</strong></p>
+<p>常用的有CREATE和DROP，用于在数据库中创建新表或删除表，以及为表加入索引等。</p>
+<p><strong><em>\</em>6.指针控制语言（CCL）**</strong></p>
+<p>它的语句，想DECLARE CURSOR、FETCH INTO和UPDATE WHERE CURRENT用于对一个或多个表单独行的操作。</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -612,7 +554,7 @@ cp rabbitmq.config.example /etc/rabbitmq/rabbitmq.config
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://aliyunceo.github.io/2020/08/07/rabbitmq-an-zhuang-shuo-ming/">http://aliyunceo.github.io/2020/08/07/rabbitmq-an-zhuang-shuo-ming/</a>
+                    <a href="http://aliyunceo.github.io/2020/10/12/dql-ddl-dml-dcl-de-qu-bie/">http://aliyunceo.github.io/2020/10/12/dql-ddl-dml-dcl-de-qu-bie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -650,8 +592,8 @@ cp rabbitmq.config.example /etc/rabbitmq/rabbitmq.config
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/RabbitMQ/">
-                                    <span class="chip bg-color">RabbitMQ</span>
+                                <a href="/tags/sql/">
+                                    <span class="chip bg-color">sql</span>
                                 </a>
                             
                         </div>
@@ -869,26 +811,25 @@ cp rabbitmq.config.example /etc/rabbitmq/rabbitmq.config
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/08/08/xiao-xi-zhong-jian-jian-gai-shu/">
+                <a href="/2020/10/12/svn-de-shi-yong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="消息中间件概述">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="svn的使用">
                         
-                        <span class="card-title">消息中间件概述</span>
+                        <span class="card-title">svn的使用</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.1. 什么是消息中间件MQ全称为Message Queue，消息队列是应用程序和应用程序之间的通信方法，是在消息的传输过程中保存消息的容器，多用于分布式系统之间进行通信。
-
-总结MQ，消息队列，存储消息的中间件分布式系统通信两种方式：直
+                            一、svn的生命周期1.创建版本
+​    版本库相当于一个集中的空间，用于存放开发者所有的工作成果。版本库不仅能存放文件，还包括了每次修改的历史，即每个文件的变动历史。Create 操作是用来创建一个新的版本库。大多数情况下这个操作只会执
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-08-08
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-12
                         </span>
                         <span class="publish-author">
                             
@@ -901,8 +842,8 @@ cp rabbitmq.config.example /etc/rabbitmq/rabbitmq.config
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/RabbitMQ/">
-                        <span class="chip bg-color">RabbitMQ</span>
+                    <a href="/tags/svn/">
+                        <span class="chip bg-color">svn</span>
                     </a>
                     
                 </div>
@@ -913,28 +854,35 @@ cp rabbitmq.config.example /etc/rabbitmq/rabbitmq.config
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/08/07/rabbitmq-an-zhuang-shuo-ming/">
+                <a href="/2020/10/10/sql-han-shu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="RabbitMQ安装说明">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="sql函数">
                         
-                        <span class="card-title">RabbitMQ安装说明</span>
+                        <span class="card-title">sql函数</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1. 安装依赖环境在线安装依赖环境：
-yum install build-essential openssl openssl-devel unixODBC unixODBC-devel make gcc gcc-c++ kernel-dev
+                            
+一、sql函数的功能​    进行数值计算
+​    修改单个数据项
+​    处理成组行的输出
+​    指定日期和数字的显示格式
+​    转换列数据类型
+二、sql函数的两种类型
+1、单行函数：只处理单个行，并且每行返回一个结果。
+
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-07
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-10
                             </span>
                         <span class="publish-author">
                             
@@ -944,12 +892,11 @@ yum install build-essential openssl openssl-devel unixODBC unixODBC-devel make g
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/RabbitMQ/">
-                        <span class="chip bg-color">RabbitMQ</span>
+                    <a href="/tags/Oracle/">
+                        <span class="chip bg-color">Oracle</span>
                     </a>
                     
                 </div>
