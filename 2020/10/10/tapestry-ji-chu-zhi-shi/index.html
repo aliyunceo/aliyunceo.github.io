@@ -470,14 +470,14 @@ daovoice('update');
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    521
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    4 分
                 </div>
                 
 
@@ -492,7 +492,7 @@ daovoice('update');
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、Tapestry-Web概述"><a href="#一、Tapestry-Web概述" class="headerlink" title="一、Tapestry Web概述"></a>一、Tapestry Web概述</h2><p>​    Tapestry是一种基于java的Web应用程序框架。Tapestry采用了组件的概念。程序员可以应用现有的组件或自定义应用程序相关的组件来构建应用程序。相对与现有的其他Web应用程序框架而言，应用Tapestry会让程序员从烦琐的，不必要的底层代码中解放出来。它使用组件对象模型来创建动态的，交互的web应用。</p>
+                <h2 id="1、Tapestry-Web概述"><a href="#1、Tapestry-Web概述" class="headerlink" title="1、Tapestry Web概述"></a>1、Tapestry Web概述</h2><p>​    Tapestry是一种基于java的Web应用程序框架。Tapestry采用了组件的概念。程序员可以应用现有的组件或自定义应用程序相关的组件来构建应用程序。相对与现有的其他Web应用程序框架而言，应用Tapestry会让程序员从烦琐的，不必要的底层代码中解放出来。它使用组件对象模型来创建动态的，交互的web应用。</p>
 <p>​    一个组件就是任意一个带有jwc id属性的html标记。其中jwc的意思是Java Web Component。</p>
 <p>​    Tapestry使得java代码与html完全分离，利用这个框架开发大型应用变得轻而易举。并且开发的应用很容易维护和升级。Tapestry支持本地化，其错误报告也很详细。Tapestry主要利用javabean和xml技术进行开发。</p>
 <p>在Tapestry框架中:</p>
@@ -502,23 +502,56 @@ daovoice('update');
 <p>页面类和组件类都是抽象或非抽象的Java类，并最终继承于Tapestry的org..apache.tapestry.AbstractComponent类。</p>
 <p>页面对于Tapestry来说，是一种特殊的组件。</p>
 <p>一个使用Tapestry框架的Web应用程序，实际上就是一堆Tapestry组件的集合。</p>
-<h2 id="二、属性路径"><a href="#二、属性路径" class="headerlink" title="二、属性路径"></a>二、属性路径</h2><p>在Tapestry框架中扩展了一个概念“属性路径”</p>
+<h2 id="2、属性路径"><a href="#2、属性路径" class="headerlink" title="2、属性路径"></a>2、属性路径</h2><p>在Tapestry框架中扩展了一个概念“属性路径”</p>
 <p>属性路径：是指一系列的用句号分割的属性名称</p>
 <p>比如visit.userName</p>
 <p>用java代码表示： getVisit().getUserName()</p>
-<h2 id="三、组件"><a href="#三、组件" class="headerlink" title="三、组件"></a>三、组件</h2><p>1.概述</p>
-<p><img src="/2020/10/10/tapestry-ji-chu-zhi-shi/blog\blog\source_posts\Tapestry基础知识\1.jpg"></p>
-<p>2.组件：正式/不正式参数</p>
-<p>Tapestry中有两种参数类型</p>
-<p>​    正式参数</p>
-<p>​    不正式参数</p>
-<p>例如：TextFiled</p>
-<p><img src="/2020/10/10/tapestry-ji-chu-zhi-shi/blog\blog\source_posts\Tapestry基础知识\2.jpg"></p>
-<p><img src="/2020/10/10/tapestry-ji-chu-zhi-shi/blog\blog\source_posts\Tapestry基础知识\3.jpg"></p>
-<p>3.组件：限制性组件</p>
-<p>​    $remove$</p>
-<p>​    $content$</p>
-<p><img src="/2020/10/10/tapestry-ji-chu-zhi-shi/blog\blog\source_posts\Tapestry基础知识\4.png"></p>
+<h2 id="3、OGNL"><a href="#3、OGNL" class="headerlink" title="3、OGNL"></a>3、OGNL</h2><p>ognl是一种强大的表达式语言</p>
+<p>通过它简单一致的表达式语法，可以存取对象的任意属性，调用对象的方法，遍历整个对象的结构图，实现字段类型转化等功能。它使用相同的表达式去存取对象的属性。    </p>
+<h2 id="4、组件："><a href="#4、组件：" class="headerlink" title="4、组件："></a>4、组件：</h2><p>正式/不正式 参数</p>
+<p>Tapestry有两种参数类型：正式参数和不正式参数</p>
+<p>限制性组件:</p>
+<p>$remove$    $content$    </p>
+<h2 id="5、页面类"><a href="#5、页面类" class="headerlink" title="5、页面类"></a>5、页面类</h2><p>页面类是一种特殊的组件</p>
+<p>所有的页面类必须是BasePage</p>
+<p>（org.apache.tapestry.html.BasePage）的子类</p>
+<p>相同点：</p>
+<p>​    有自己的规范文件</p>
+<p>​    可以包含其他组件</p>
+<p>​    有自己的模板</p>
+<p>不同点：</p>
+<p>​    没有参数（页面类处于整个组件层次的最外层）</p>
+<p>页面状态 ：瞬时、动态、持久</p>
+<p>几个特殊的页面类:</p>
+<p>Home:程序开始页面，必须由开发者提供</p>
+<p>Exception:用来显示没有被捕捉的异常信息</p>
+<p>StaleSession:session失效页面</p>
+<p>​                        页面抛出StaleSessionException异常，才显示</p>
+<p>​                        可以覆盖</p>
+<p>StaleLink:连接失效页面</p>
+<p>​                 页面抛出StaleLinkException异常，才显示</p>
+<p>​                 可以覆盖</p>
+<h2 id="6、创建组件"><a href="#6、创建组件" class="headerlink" title="6、创建组件"></a>6、创建组件</h2><p>选择父类</p>
+<p>Tapestry中有两种组件：一种是没有HTML模板的组件——单一型组件，一种是有HTML模板的组件——组合型组件</p>
+<p>单一型组件需要继承AbstractComponent类，并且必须实现renderComponent() 方法。</p>
+<p>组合型组件需要继承BaseComponent（是AbstractComponent的一个子类），不必须再单独的实现renderComponent() 方法</p>
+<p>参数：一般情况下，组件的参数会自动对应Java类中的一个同名属性。</p>
+<h2 id="7、服务"><a href="#7、服务" class="headerlink" title="7、服务"></a>7、服务</h2><p>Tapestry中提供的常见的服务有：page、direct、action、external等等</p>
+<p>大部分服务都有一个关联的组件，比如PageLink、DirectLink、ActionLink、ExternalLink 等等</p>
+<h2 id="8、对象"><a href="#8、对象" class="headerlink" title="8、对象"></a>8、对象</h2><p>visit对象：</p>
+<p>Visit对象是一个Tapestry应用程序的对象容器，用来存储应用程序逻辑和数据，这个对象能被应用程序中所有页面和组件共享。实际上，Visit对象最终作为一个HttpSession的属性被存储。 </p>
+<p>Visit对象在Tapestry框架启动时通过读取应用程序规范文件，将Visit对象的配置信息存入Tapestry框架的引擎对象中。</p>
+<p>Global对象：</p>
+<p>Global对象是一个应用程序空间，用来存储全局性的应用程序逻辑和数据。Global对象最终作为一个ServletContext的属性被储存。<br>可以在规范文件中如此定义</p>
+<pre><code>&lt;property name=“org.apache.tapestry.global-class”&gt;com.linkage.MyGlobal&lt;/property&gt;</code></pre>
+<h2 id="9、配置"><a href="#9、配置" class="headerlink" title="9、配置"></a>9、配置</h2><p>Tapestry的工作原理如下：在web.xml文件中定义一个名为ApplicationServlet的servlet来进行处理所有的http请求，它主要职责是负责引导整个tapestry核心，启动日志功能，读取配置文件，创建工作引擎来指派客户请求。</p>
+<p>配置页面的4个步骤：</p>
+<ol>
+<li>注册名字</li>
+<li>编写html模板</li>
+<li>编写页面规范</li>
+<li>编写页面类</li>
+</ol>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -831,15 +864,13 @@ daovoice('update');
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-一、sql函数的功能​    进行数值计算
+                            一、sql函数的功能​    进行数值计算
 ​    修改单个数据项
 ​    处理成组行的输出
 ​    指定日期和数字的显示格式
 ​    转换列数据类型
-二、sql函数的两种类型
-1、单行函数：只处理单个行，并且每行返回一个结果。
-
+二、sql函数的两种类型1、单行函数：只处理单个行，并且每行返回一个结果。
+​ 
                         
                     </div>
                     <div class="publish-info">
@@ -1115,7 +1146,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">12.6k</span>&nbsp;字
+                class="white-color">13.3k</span>&nbsp;字
             
             
             
