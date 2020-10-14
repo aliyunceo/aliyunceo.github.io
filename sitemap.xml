@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://aliyunceo.github.io/2020/10/14/tapestry-de-kai-fa-xiang-qing/</loc>
+    
+    <lastmod>2020-10-14</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://aliyunceo.github.io/2020/10/10/sql-han-shu/</loc>
     
     <lastmod>2020-10-13</lastmod>
@@ -116,7 +123,7 @@
 
   <url>
     <loc>http://aliyunceo.github.io/</loc>
-    <lastmod>2020-10-13</lastmod>
+    <lastmod>2020-10-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -124,42 +131,42 @@
   
   <url>
     <loc>http://aliyunceo.github.io/tags/sql/</loc>
-    <lastmod>2020-10-13</lastmod>
+    <lastmod>2020-10-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/SpringCloud/</loc>
-    <lastmod>2020-10-13</lastmod>
+    <lastmod>2020-10-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/RabbitMQ/</loc>
-    <lastmod>2020-10-13</lastmod>
+    <lastmod>2020-10-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/Tapestry/</loc>
-    <lastmod>2020-10-13</lastmod>
+    <lastmod>2020-10-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/Oracle/</loc>
-    <lastmod>2020-10-13</lastmod>
+    <lastmod>2020-10-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/svn/</loc>
-    <lastmod>2020-10-13</lastmod>
+    <lastmod>2020-10-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
