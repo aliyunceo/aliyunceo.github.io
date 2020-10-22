@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>对Navicat Premium连接Oracle时报错，提示信息oracle library is not loaded的问题的解决方案</title>
+      <link href="/2020/10/22/dui-navicat-premium-lian-jie-oracle-shi-bao-cuo-ti-shi-xin-xi-oracle-library-is-not-loaded-de-wen-ti-de-jie-jue-fang-an/"/>
+      <url>/2020/10/22/dui-navicat-premium-lian-jie-oracle-shi-bao-cuo-ti-shi-xin-xi-oracle-library-is-not-loaded-de-wen-ti-de-jie-jue-fang-an/</url>
+      
+        <content type="html"><![CDATA[<p>对Navicat Premium连接Oracle时报错，提示信息oracle library is not loaded的问题的解决方案</p><p>解决方案：配置Navicat Premium的环境，具体方法如下：</p><p>1.打开<a href="http://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html">http://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html</a></p><p>2.选择跟自己操作系统匹配的“instant Client”。</p><img src="/2020/10/22/dui-navicat-premium-lian-jie-oracle-shi-bao-cuo-ti-shi-xin-xi-oracle-library-is-not-loaded-de-wen-ti-de-jie-jue-fang-an/1.png" style="zoom: 50%;"><p>3.下载此文件</p><img src="/2020/10/22/dui-navicat-premium-lian-jie-oracle-shi-bao-cuo-ti-shi-xin-xi-oracle-library-is-not-loaded-de-wen-ti-de-jie-jue-fang-an/2.jpg" style="zoom: 33%;"><p>4.打开对Navicat-Premium进行环境配置</p><img src="/2020/10/22/dui-navicat-premium-lian-jie-oracle-shi-bao-cuo-ti-shi-xin-xi-oracle-library-is-not-loaded-de-wen-ti-de-jie-jue-fang-an/3.jpg" style="zoom: 33%;"><p>5.配置环境</p><img src="/2020/10/22/dui-navicat-premium-lian-jie-oracle-shi-bao-cuo-ti-shi-xin-xi-oracle-library-is-not-loaded-de-wen-ti-de-jie-jue-fang-an/4.jpg" style="zoom:33%;"><p>6.重启对Navicat-Premium，即可解决问题</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Tapestry的开发详情</title>
       <link href="/2020/10/14/tapestry-de-kai-fa-xiang-qing/"/>
       <url>/2020/10/14/tapestry-de-kai-fa-xiang-qing/</url>

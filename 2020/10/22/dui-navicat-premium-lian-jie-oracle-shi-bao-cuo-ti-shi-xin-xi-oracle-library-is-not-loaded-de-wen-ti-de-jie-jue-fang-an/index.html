@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="svn的使用, 知否">
+    <meta name="keywords" content="对Navicat Premium连接Oracle时报错，提示信息oracle library is not loaded的问题的解决方案, 知否">
 	<meta name="baidu-site-verification" content="xvbAoexk6z" />
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>svn的使用 | 知否</title>
+    <title>对Navicat Premium连接Oracle时报错，提示信息oracle library is not loaded的问题的解决方案 | 知否</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -318,12 +318,12 @@ daovoice('update');
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">svn的使用</h1>
+                    <h1 class="description center-align post-title">对Navicat Premium连接Oracle时报错，提示信息oracle library is not loaded的问题的解决方案</h1>
                 </div>
             </div>
         </div>
@@ -438,13 +438,9 @@ daovoice('update');
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/svn/">
-                                <span class="chip bg-color">svn</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -456,28 +452,28 @@ daovoice('update');
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-10-12
+                    2020-10-22
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-10-12
+                    2020-10-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.7k
+                    160
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    18 分
+                    1 分
                 </div>
                 
 
@@ -492,324 +488,22 @@ daovoice('update');
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h5 id="一、svn的生命周期"><a href="#一、svn的生命周期" class="headerlink" title="一、svn的生命周期"></a>一、svn的生命周期</h5><p>1.创建版本</p>
-<p>​    版本库相当于一个集中的空间，用于存放开发者所有的工作成果。版本库不仅能存放文件，还包括了每次修改的历史，即每个文件的变动历史。Create 操作是用来创建一个新的版本库。大多数情况下这个操作只会执行一次。当你创建一个新的版本库的时候，你的版本控制系统会让你提供一些信息来标识版本库，例如创建的位置和版本库的名字。</p>
-<p>2.检出</p>
-<p>​    Checkout 操作是用来从版本库创建一个工作副本。工作副本是开发者私人的工作空间，可以进行内容的修改，然后提交到版本库中。</p>
-<p>3.更新</p>
-<p>​    update 操作是用来更新版本库的。这个操作将工作副本与版本库进行同步。由于版本库是由整个团队共用的，当其他人提交了他们的改动之后，你的工作副本就会过期。</p>
-<p>​    假设 Tom 和 Jerry 是一个项目的两个开发者。他们同时从版本库中检出了最新的版本并开始工作。此时，工作副本是与版本库完全同步的。然后，Jerry 很高效的完成了他的工作并提交了更改到版本库中。</p>
-<p>​    此时 Tom 的工作副本就过期了。更新操作将会从版本库中拉取 Jerry 的最新改动并将 Tom 的工作副本进行更新。</p>
-<p>4.执行变更</p>
-<p>​    当检出之后，你就可以做很多操作来执行变更。编辑是最常用的操作。你可以编辑已存在的文件，例如进行文件的添加/删除操作。</p>
-<p>你可以添加文件/目录。但是这些添加的文件目录不会立刻成为版本库的一部分，而是被添加进待变更列表中，直到执行了 commit 操作后才会成为版本库的一部分。</p>
-<p>​    同样地你可以删除文件/目录。删除操作立刻将文件从工作副本中删除掉，但该文件的实际删除只是被添加到了待变更列表中，直到执行了 commit 操作后才会真正删除。</p>
-<p>​    Rename 操作可以更改文件/目录的名字。”移动”操作用来将文件/目录从一处移动到版本库中的另一处。</p>
-<p>5.复查变化</p>
-<p>​    当你检出工作副本或者更新工作副本后，你的工作副本就跟版本库完全同步了。但是当你对工作副本进行一些修改之后，你的工作副本会比版本库要新。在 commit 操作之前复查下你的修改是一个很好的习惯。</p>
-<p>​    Status 操作列出了工作副本中所进行的变动。正如我们之前提到的，你对工作副本的任何改动都会成为待变更列表的一部分。Status 操作就是用来查看这个待变更列表。</p>
-<p>​    Status 操作只是提供了一个变动列表，但并不提供变动的详细信息。你可以用 diff 操作来查看这些变动的详细信息。</p>
-<p>6.修复错误</p>
-<p>​    假设你对工作副本做了许多修改，但是现在你不想要这些修改了，这时候 revert 操作将会帮助你。</p>
-<p>​    Revert 操作重置了对工作副本的修改。它可以重置一个或多个文件/目录。当然它也可以重置整个工作副本。在这种情况下，revert 操作将会销毁待变更列表并将工作副本恢复到原始状态。</p>
-<p>7.解决冲突</p>
-<p>​    合并的时候可能会发生冲突。Merge 操作会自动处理可以安全合并的东西。其它的会被当做冲突。例如，”hello.c” 文件在一个分支上被修改，在另一个分支上被删除了。这种情况就需要人为处理。Resolve 操作就是用来帮助用户找出冲突并告诉版本库如何处理这些冲突。</p>
-<p>8.提交更改</p>
-<p>​    Commit 操作是用来将更改从工作副本到版本库。这个操作会修改版本库的内容，其它开发者可以通过更新他们的工作副本来查看这些修改。</p>
-<p>​    在提交之前，你必须将文件/目录添加到待变更列表中。列表中记录了将会被提交的改动。当提交的时候，我们通常会提供一个注释来说明为什么会进行这些改动。这个注释也会成为版本库历史记录的一部分。Commit 是一个原子操作，也就是说要么完全提交成功，要么失败回滚。用户不会看到成功提交一半的情况。</p>
-<h5 id="二、svn启动模式"><a href="#二、svn启动模式" class="headerlink" title="二、svn启动模式"></a>二、svn启动模式</h5><p>首先,在服务端进行SVN版本库的相关配置</p>
-<p>手动新建版本库目录</p>
-<pre class=" language-shell"><code class="language-shell">mkdir /opt/svn</code></pre>
-<p>利用svn命令创建版本库</p>
-<pre class=" language-shell"><code class="language-shell">svnadmin create /opt/svn/runoob</code></pre>
-<p>使用命令svnserve启动服务</p>
-<pre><code>svnserve -d -r 目录 --listen-port 端口号</code></pre>
-<ul>
-<li><p><strong>-r:</strong> 配置方式决定了版本库访问方式。</p>
-</li>
-<li><p><strong>–listen-port:</strong> 指定SVN监听端口，不加此参数，SVN默认监听3690</p>
-</li>
-<li><p>由于-r 配置方式的不一样，SVN启动就可以有两种不同的访问方式</p>
-</li>
-<li><p>方式一：-r直接指定到版本库(称之为单库svnserve方式)</p>
-</li>
-<li><pre><code>svnserve -d -r /opt/svn/runoob</code></pre>
-</li>
-<li><p>在这种情况下，一个svnserve只能为一个版本库工作。</p>
-</li>
-<li><p>authz配置文件中对版本库权限的配置应这样写：</p>
-</li>
-<li><pre><code>[groups]
-admin=user1
-dev=user2
-[/]
-@admin=rw
-user2=r</code></pre>
-</li>
-<li><p>使用类似这样的URL：svn://192.168.0.1/　即可访问runoob版本库</p>
-</li>
-<li><p>方式二：指定到版本库的上级目录(称之为多库svnserve方式)</p>
-</li>
-<li><pre><code>svnserve -d -r /opt/svn</code></pre>
-</li>
-<li><p>这种情况，一个svnserve可以为多个版本库工作</p>
-</li>
-<li><p>authz配置文件中对版本库权限的配置应这样写：</p>
-</li>
-<li><pre><code>[groups]
-admin=user1
-dev=user2
-[runoob:/]
-@admin=rw
-user2=r
+                <p>对Navicat Premium连接Oracle时报错，提示信息oracle library is not loaded的问题的解决方案</p>
+<p>解决方案：配置Navicat Premium的环境，具体方法如下：</p>
+<p>1.打开<a target="_blank" rel="noopener" href="http://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html">http://www.oracle.com/technetwork/database/database-technologies/instant-client/downloads/index.html</a></p>
+<p>2.选择跟自己操作系统匹配的“instant Client”。</p>
+<img src="/2020/10/22/dui-navicat-premium-lian-jie-oracle-shi-bao-cuo-ti-shi-xin-xi-oracle-library-is-not-loaded-de-wen-ti-de-jie-jue-fang-an/1.png" style="zoom: 50%;">
 
-[runoob01:/]
-@admin=rw
-user2=r</code></pre>
-</li>
-<li><p>如果此时你还用[/]，则表示所有库的根目录，同理，[/src]表示所有库的根目录下的src目录。</p>
-</li>
-<li><p>使用类似这样的URL：svn://192.168.0.1/runoob　即可访问runoob版本库</p>
-</li>
-</ul>
-<h5 id="三、svn创建版本库"><a href="#三、svn创建版本库" class="headerlink" title="三、svn创建版本库"></a>三、svn创建版本库</h5><p>使用svn命令创建资源库</p>
-<pre><code>[runoob@centos6 ~]# svnadmin create /opt/svn/runoob01
-[runoob@centos6 ~]# ll /opt/svn/runoob01/
-total 24
-drwxr-xr-x 2 root root 4096 2016/08/23 16:31:06 conf
-drwxr-sr-x 6 root root 4096 2016/08/23 16:31:06 db
--r--r--r-- 1 root root    2 2016/08/23 16:31:06 format
-drwxr-xr-x 2 root root 4096 2016/08/23 16:31:06 hooks
-drwxr-xr-x 2 root root 4096 2016/08/23 16:31:06 locks
--rw-r--r-- 1 root root  229 2016/08/23 16:31:06 README.txt</code></pre>
-<p>进入/opt/svn/runoob01/conf目录 修改默认配置文件配置，包括svnserve.conf、passwd、authz 配置相关用户和权限。</p>
-<p>1、svn服务配置文件svnserve.conf</p>
-<p>svn服务配置文件为版本库目录中的文件conf/svnserve.conf。该文件仅由一个[general]配置段组成。</p>
-<pre><code>[general]
-anon-access = none
-auth-access = write
-password-db = /home/svn/passwd
-authz-db = /home/svn/authz
-realm = tiku </code></pre>
-<ul>
-<li><strong>anon-access:</strong> 控制非鉴权用户访问版本库的权限，取值范围为”write”、”read”和”none”。 即”write”为可读可写，”read”为只读，”none”表示无访问权限。 默认值：read</li>
-<li><strong>auth-access:</strong> 控制鉴权用户访问版本库的权限。取值范围为”write”、”read”和”none”。 即”write”为可读可写，”read”为只读，”none”表示无访问权限。 默认值：write</li>
-<li><strong>authz-db:</strong> 指定权限配置文件名，通过该文件可以实现以路径为基础的访问控制。 除非指定绝对路径，否则文件位置为相对conf目录的相对路径。 默认值：authz</li>
-<li><strong>realm:</strong> 指定版本库的认证域，即在登录时提示的认证域名称。若两个版本库的 认证域相同，建议使用相同的用户名口令数据文件。 默认值：一个UUID(Universal Unique IDentifier，全局唯一标示)。</li>
-</ul>
-<p>2、用户名口令文件passwd</p>
-<p>用户名口令文件由svnserve.conf的配置项password-db指定，默认为conf目录中的passwd。该文件仅由一个[users]配置段组成。</p>
-<p>[users]配置段的配置行格式如下：</p>
-<pre><code>&lt;用户名&gt; = &lt;口令&gt;
-[users]
-admin = admin
-thinker = 123456</code></pre>
-<p>3、权限配置文件</p>
-<p>权限配置文件由svnserve.conf的配置项authz-db指定，默认为conf目录中的authz。该配置文件由一个[groups]配置段和若干个版本库路径权限段组成。</p>
-<p>[groups]配置段中配置行格式如下：</p>
-<pre><code>&lt;用户组&gt; = &lt;用户列表&gt;</code></pre>
-<p>版本库路径权限段的段名格式如下：</p>
-<pre><code>[&lt;版本库名&gt;:&lt;路径&gt;] 
-[groups]
-g_admin = admin,thinker
-[admintools:/]
-@g_admin = rw
-* =
-[test:/home/thinker]
-thinker = rw
-* = r</code></pre>
-<h5 id="四、svn检出操作"><a href="#四、svn检出操作" class="headerlink" title="四、svn检出操作"></a>四、svn检出操作</h5><p>代码拉取</p>
-<h5 id="五、解决冲突"><a href="#五、解决冲突" class="headerlink" title="五、解决冲突"></a>五、解决冲突</h5><p>假设 A、B 两个用户都在版本号为 100 的时候，更新了 kingtuns.txt 这个文件，A 用户在修改完成之后提交 kingtuns.txt 到服务器， 这个时候提交成功，这个时候 kingtuns.txt 文件的版本号已经变成 101 了。同时B用户在版本号为 100 的 kingtuns.txt 文件上作修改， 修改完成之后提交到服务器时，由于不是在当前最新的 101 版本上作的修改，所以导致提交失败。</p>
-<p>我们已在本地检出 runoob01 库，下面我们将实现版本冲突的解决方法。</p>
-<p>我们发现 HelloWorld.html 文件存在错误，需要修改文件并提交到版本库中。</p>
-<p>我们将 HelloWorld.html 的内容修改为 “HelloWorld! <a target="_blank" rel="noopener" href="http://www.runoob.com/&quot;%E3%80%82">http://www.runoob.com/"。</a></p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# cat HelloWorld.html 
-HelloWorld! http://www.runoob.com/</code></pre>
-<p>用下面的命令查看更改：</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# svn diff 
-Index: HelloWorld.html
-===================================================================
---- HelloWorld.html     (revision 5)
-+++ HelloWorld.html     (working copy)
-@@ -1,2 +1 @@
--HelloWorld! http://www.runoob.com/
-+HelloWorld! http://www.runoob.com/!</code></pre>
-<p>尝试使用下面的命令来提交他的更改：</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# svn commit -m "change HelloWorld.html first"
-Sending        HelloWorld.html
-Transmitting file data .svn: E160028: Commit failed (details follow):
-svn: E160028: File '/trunk/HelloWorld.html' is out of date</code></pre>
-<p>这时我发现提交失败了。</p>
-<p>因为此时，HelloWorld.html 已经被 user02 修改并提交到了仓库。Subversion 不会允许 user01(本例使用的 svn 账号)提交更改，因为 user02 已经修改了仓库，所以我们的工作副本已经失效。</p>
-<p>为了避免两人的代码被互相覆盖，Subversion 不允许我们进行这样的操作。所以我们在提交更改之前必须先更新工作副本。所以使用 update 命令，如下：</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# svn update
-Updating '.':
-C    HelloWorld.html
-Updated to revision 6.
-Conflict discovered in file 'HelloWorld.html'.
-Select: (p) postpone, (df) show diff, (e) edit file, (m) merge,
-        (mc) my side of conflict, (tc) their side of conflict,
-        (s) show all options: mc
-Resolved conflicted state of 'HelloWorld.html'
-Summary of conflicts:
-  Text conflicts: 0 remaining (and 1 already resolved)</code></pre>
-<p>这边输入”mc”,以本地的文件为主。你也可以使用其选项对冲突的文件进行不同的操作。</p>
-<p>默认是更新到最新的版本，我们也可以指定更新到哪个版本</p>
-<pre><code>svn update -r6</code></pre>
-<p>此时工作副本是和仓库已经同步，可以安全地提交更改了</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# svn commit -m "change HelloWorld.html second"
-Sending        HelloWorld.html
-Transmitting file data .
-Committed revision 7.</code></pre>
-<h5 id="六、svn提交操作"><a href="#六、svn提交操作" class="headerlink" title="六、svn提交操作"></a>六、svn提交操作</h5><p>我们在库本版中需要增加一个readme的说明文件。</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# cat readme 
-this is SVN tutorial.</code></pre>
-<p>查看工作副本中的状态。</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# svn status
-?       readme</code></pre>
-<p>此时 readme的状态为？，说明它还未加到版本控制中。</p>
-<p>将文件readme加到版本控制，等待提交到版本库。</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# svn add readme 
-A         readme</code></pre>
-<p>查看工作副本中的状态</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# svn status     
-A       readme</code></pre>
-<p>此时 readme的状态为A,它意味着这个文件已经被成功地添加到了版本控制中。</p>
-<p>为了把 readme 存储到版本库中，使用 commit -m 加上注释信息来提交。</p>
-<p>如果你忽略了 -m 选项， SVN会打开一个可以输入多行的文本编辑器来让你输入提交信息。</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# svn commit -m "SVN readme."
-Adding         readme
-Transmitting file data .
-Committed revision 8.
-svn commit -m "SVN readme."</code></pre>
-<h5 id="七、版本回退"><a href="#七、版本回退" class="headerlink" title="七、版本回退"></a>七、版本回退</h5><p>​    当我们想放弃对文件的修改，可以使用 <strong>SVN revert</strong> 命令。</p>
-<p>svn revert 操作将撤销任何文件或目录里的局部更改。</p>
-<p>我们对文件 readme 进行修改,查看文件状态。</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# svn status
-M       readme</code></pre>
-<p>这时我们发现修改错误，要撤销修改，通过 svn revert 文件 readme 回归到未修改状态。</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# svn revert readme 
-Reverted 'readme'</code></pre>
-<p>再查看状态。</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# svn status 
-root@runoob:~/svn/runoob01/trunk# </code></pre>
-<p>进行 revert 操作之后，readme 文件恢复了原始的状态。 revert 操作不单单可以使单个文件恢复原状， 而且可以使整个目录恢复原状。恢复目录用 -R 命令，如下。</p>
-<pre><code>svn revert -R trunk</code></pre>
-<p>但是，假如我们想恢复一个已经提交的版本怎么办。</p>
-<p>为了消除一个旧版本，我们必须撤销旧版本里的所有更改然后提交一个新版本。这种操作叫做 reverse merge。</p>
-<p>首先，找到仓库的当前版本，现在是版本 22，我们要撤销回之前的版本，比如版本 21。</p>
-<pre><code>svn merge -r 22:21 readme </code></pre>
-<h5 id="八、svn查看历史信息"><a href="#八、svn查看历史信息" class="headerlink" title="八、svn查看历史信息"></a>八、svn查看历史信息</h5><p>1.svn log</p>
-<p>可以显示所有的信息，如果只希望查看特定的某两个版本之间的信息，可以使用：</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# svn log -r 6:8</code></pre>
-<p>如果只想查看某一个文件的版本修改信息，可以使用 <strong>svn log</strong> 文件路径。</p>
-<pre><code>root@runoob:~/svn/runoob01# svn log trunk/HelloWorld.html </code></pre>
-<p>如果希望得到目录的信息要加 <strong>-v</strong>。</p>
-<p>如果希望显示限定N条记录的目录信息，使用 <strong>svn log -l N -v</strong>。</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# svn log -l 5 -v </code></pre>
-<p>2.svn diff</p>
-<p>用来检查历史修改的详情。</p>
-<ul>
-<li><p>检查本地修改</p>
-</li>
-<li><p>比较工作拷贝与版本库</p>
-</li>
-<li><p>比较版本库与版本库</p>
-<p>（1）、如果用 svn diff，不带任何参数，它将会比较你的工作文件与缓存在 .svn 的”原始”拷贝。</p>
-<pre class=" language-shell"><code class="language-shell">root@runoob:~/svn/runoob01/trunk# svn diff</code></pre>
-<p>（2）、比较工作拷贝和版本库</p>
-<p>比较你的工作拷贝和版本库中版本号为 3 的文件 rule.txt。</p>
-<pre><code>svn diff -r 3 rule.txt</code></pre>
-<p>（3）、比较版本库与版本库</p>
-<p>通过 -r(revision) 传递两个通过冒号分开的版本号，这两个版本会进行比较。</p>
-<p>比较 svn 工作版本中版本号2和3的这个文件的变化。</p>
-<pre><code>svn diff -r 2:3 rule.txt</code></pre>
-</li>
-</ul>
-<p>3.svn cat</p>
-<p>如果只是希望检查一个过去版本，不希望查看他们的区别，可使用svn cat</p>
-<pre><code>svn cat -r 版本号 rule.txt</code></pre>
-<p>这个命令会显示在该版本号下的该文件内容</p>
-<hr>
-<p>4.svn list</p>
-<p>s<strong>vn list</strong> 可以在不下载文件到本地目录的情况下来察看目录中的文件：</p>
-<pre><code>$ svn list http://192.168.0.1/runoob01
-README
-branches/
-clients/
-tags/</code></pre>
-<h5 id="九、svn分支"><a href="#九、svn分支" class="headerlink" title="九、svn分支"></a>九、svn分支</h5><p>Branch 选项会给开发者创建出另外一条线路。当有人希望开发进程分开成两条不同的线路时，这个选项会非常有用。</p>
-<p>比如项目 demo 下有两个小组，svn 下有一个 trunk 版。</p>
-<p>由于客户需求突然变化，导致项目需要做较大改动，此时项目组决定由小组 1 继续完成原来正进行到一半的工作（某个模块），小组 2 进行新需求的开发。</p>
-<p>那么此时，我们就可以为小组2建立一个分支，分支其实就是 trunk 版（主干线）的一个copy版，不过分支也是具有版本控制功能的，而且是和主干线相互独立的，当然，到最后我们可以通过（合并）功能，将分支合并到 trunk 上来，从而最后合并为一个项目。</p>
-<p>我们在本地副本中创建一个 <strong>my_branch</strong> 分支。</p>
-<pre><code>root@runoob:~/svn/runoob01# ls
-branches  tags  trunk
-root@runoob:~/svn/runoob01# svn copy trunk/ branches/my_branch
-A         branches/my_branch
-root@runoob:~/svn/runoob01# </code></pre>
-<p>查看状态：</p>
-<pre><code>root@runoob:~/svn/runoob01# svn status
-A  +    branches/my_branch
-A  +    branches/my_branch/HelloWorld.html
-A  +    branches/my_branch/readme</code></pre>
-<p>提交新增的分支到版本库。</p>
-<pre><code>root@runoob:~/svn/runoob01# svn commit -m "add my_branch" 
-Adding         branches/my_branch
-Replacing      branches/my_branch/HelloWorld.html
-Adding         branches/my_branch/readme
+<p>3.下载此文件</p>
+<img src="/2020/10/22/dui-navicat-premium-lian-jie-oracle-shi-bao-cuo-ti-shi-xin-xi-oracle-library-is-not-loaded-de-wen-ti-de-jie-jue-fang-an/2.jpg" style="zoom: 33%;">
 
-Committed revision 9.</code></pre>
-<p>接着我们就到 my_branch 分支进行开发，切换到分支路径并创建 index.html 文件。</p>
-<pre><code>root@runoob:~/svn/runoob01# cd branches/my_branch/
-root@runoob:~/svn/runoob01/branches/my_branch# ls
-HelloWorld.html  index.html  readme</code></pre>
-<p>将 index.html 加入版本控制，并提交到版本库中。</p>
-<pre><code>root@runoob:~/svn/runoob01/branches/my_branch# svn status
-?       index.html
-root@runoob:~/svn/runoob01/branches/my_branch# svn add index.html 
-A         index.html
-root@runoob:~/svn/runoob01/branches/my_branch# svn commit -m "add index.html"
-Adding         index.html
-Transmitting file data .
-Committed revision 10.</code></pre>
-<p>切换到 trunk，执行 svn update，然后将 my_branch 分支合并到 trunk 中。</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# svn merge ../branches/my_branch/
---- Merging r10 into '.':
-A    index.html
---- Recording mergeinfo for merge of r10 into '.':
- G   .</code></pre>
-<p>此时查看目录，可以看到 trunk 中已经多了 my_branch 分支创建的 index.html 文件。</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# ll
-total 16
-drwxr-xr-x 2 root root 4096 Nov  7 03:52 ./
-drwxr-xr-x 6 root root 4096 Jul 21 19:19 ../
--rw-r--r-- 1 root root   36 Nov  7 02:23 HelloWorld.html
--rw-r--r-- 1 root root    0 Nov  7 03:52 index.html
--rw-r--r-- 1 root root   22 Nov  7 03:06 readme</code></pre>
-<p>将合并好的 trunk 提交到版本库中。</p>
-<pre><code>root@runoob:~/svn/runoob01/trunk# svn commit -m "add index.html"
-Adding         index.html
-Transmitting file data .
-Committed revision 11.</code></pre>
-<h5 id="十、svn标签"><a href="#十、svn标签" class="headerlink" title="十、svn标签"></a>十、svn标签</h5><p>版本管理系统支持 tag 选项，通过使用 tag 的概念，我们可以给某一个具体版本的代码一个更加有意义的名字。</p>
-<p>Tags 即标签主要用于项目开发中的里程碑，比如开发到一定阶段可以单独一个版本作为发布等，它往往代表一个可以固定的完整的版本，这跟 VSS 中的 Tag 大致相同。</p>
-<p>我们在本地工作副本创建一个 tag。</p>
-<pre><code>root@runoob:~/svn/runoob01# svn copy trunk/ tags/v1.0
-A         tags/v1.0</code></pre>
-<p>上面的代码成功完成，新的目录将会被创建在 tags 目录下。</p>
-<pre><code>root@runoob:~/svn/runoob01# ls tags/
-v1.0
-root@runoob:~/svn/runoob01# ls tags/v1.0/
-HelloWorld.html  readme</code></pre>
-<p>查看状态。</p>
-<pre><code>root@runoob:~/svn/runoob01# svn status
-A  +    tags/v1.0</code></pre>
-<p>提交tag内容。</p>
-<pre><code>root@runoob:~/svn/runoob01# svn commit -m "tags v1.0" 
-Adding         tags/v1.0
-Transmitting file data ..
-Committed revision 14.</code></pre>
+<p>4.打开对Navicat-Premium进行环境配置</p>
+<img src="/2020/10/22/dui-navicat-premium-lian-jie-oracle-shi-bao-cuo-ti-shi-xin-xi-oracle-library-is-not-loaded-de-wen-ti-de-jie-jue-fang-an/3.jpg" style="zoom: 33%;">
+
+<p>5.配置环境</p>
+<img src="/2020/10/22/dui-navicat-premium-lian-jie-oracle-shi-bao-cuo-ti-shi-xin-xi-oracle-library-is-not-loaded-de-wen-ti-de-jie-jue-fang-an/4.jpg" style="zoom:33%;">
+
+<p>6.重启对Navicat-Premium，即可解决问题</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -853,7 +547,7 @@ Committed revision 14.</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://aliyunceo.github.io/2020/10/12/svn-de-shi-yong/">http://aliyunceo.github.io/2020/10/12/svn-de-shi-yong/</a>
+                    <a href="http://aliyunceo.github.io/2020/10/22/dui-navicat-premium-lian-jie-oracle-shi-bao-cuo-ti-shi-xin-xi-oracle-library-is-not-loaded-de-wen-ti-de-jie-jue-fang-an/">http://aliyunceo.github.io/2020/10/22/dui-navicat-premium-lian-jie-oracle-shi-bao-cuo-ti-shi-xin-xi-oracle-library-is-not-loaded-de-wen-ti-de-jie-jue-fang-an/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -890,11 +584,7 @@ Committed revision 14.</code></pre>
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/svn/">
-                                    <span class="chip bg-color">svn</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -1106,9 +796,50 @@ Committed revision 14.</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/10/22/dui-navicat-premium-lian-jie-oracle-shi-bao-cuo-ti-shi-xin-xi-oracle-library-is-not-loaded-de-wen-ti-de-jie-jue-fang-an/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="对Navicat Premium连接Oracle时报错，提示信息oracle library is not loaded的问题的解决方案">
+                        
+                        <span class="card-title">对Navicat Premium连接Oracle时报错，提示信息oracle library is not loaded的问题的解决方案</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            对Navicat Premium连接Oracle时报错，提示信息oracle library is not loaded的问题的解决方案
+解决方案：配置Navicat Premium的环境，具体方法如下：
+1.打开http://www.or
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-22
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            含光君
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/10/14/tapestry-de-kai-fa-xiang-qing/">
                     <div class="card-image">
@@ -1126,9 +857,9 @@ Committed revision 14.</code></pre>
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-10-14
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1142,53 +873,6 @@ Committed revision 14.</code></pre>
                     
                     <a href="/tags/Tapestry/">
                         <span class="chip bg-color">Tapestry</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/10/12/dql-ddl-dml-dcl-de-qu-bie/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="DQL、DDL、DML、DCL的区别">
-                        
-                        <span class="card-title">DQL、DDL、DML、DCL的区别</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            SQL结构化查询语言包含6个部分
-\1.\*数据查询语言（DQL: Data Query Language）***
-数据检索语句，用于从表中获取数据。通常最常用的为保留字SELECT,并且常与FROM子句、WHERE子句组成查询SQL查询语
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-10-12
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            含光君
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/sql/">
-                        <span class="chip bg-color">sql</span>
                     </a>
                     
                 </div>
