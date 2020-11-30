@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2020-11-28T14:00:05.452Z</updated>
+  <updated>2020-11-30T14:10:16.858Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -15,6 +15,90 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nginx限流</title>
+    <link href="http://aliyunceo.github.io/2020/11/30/nginx-xian-liu/"/>
+    <id>http://aliyunceo.github.io/2020/11/30/nginx-xian-liu/</id>
+    <published>2020-11-30T13:59:41.000Z</published>
+    <updated>2020-11-30T14:10:16.858Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;nginx限流的方式&lt;/p&gt;
+&lt;p&gt;一般情况下，首页的并发量是比较大的，即使有了多级缓存，如果有大量恶意的请求，也会对系统造成影响。而限流就是保护措施之一。&lt;/p&gt;
+&lt;p&gt;nginx提供两种限流的方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一是控制速率&lt;/li&gt;
+&lt;li&gt;二是控制并发
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="nginx" scheme="http://aliyunceo.github.io/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>缓存预热+二级缓存查询</title>
+    <link href="http://aliyunceo.github.io/2020/11/30/huan-cun-yu-re-er-ji-huan-cun-cha-xun/"/>
+    <id>http://aliyunceo.github.io/2020/11/30/huan-cun-yu-re-er-ji-huan-cun-cha-xun/</id>
+    <published>2020-11-30T13:30:49.000Z</published>
+    <updated>2020-11-30T13:55:11.052Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-实现缓存预热和二级缓存查询&quot;&gt;&lt;a href=&quot;#1-实现缓存预热和二级缓存查询&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="缓存" scheme="http://aliyunceo.github.io/tags/%E7%BC%93%E5%AD%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nginx的三大功能</title>
+    <link href="http://aliyunceo.github.io/2020/11/29/nginx-de-san-da-gong-neng/"/>
+    <id>http://aliyunceo.github.io/2020/11/29/nginx-de-san-da-gong-neng/</id>
+    <published>2020-11-29T12:18:53.000Z</published>
+    <updated>2020-11-29T12:47:22.160Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;一个单机的Tomcat理论上最多能承载500个并发，Tomcat集群内部最多5个服务器，超过5个对于整个Tomcat服务器的性能来说是不升反降的&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;单机的Nginx能够承载的最大并发
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="nginx" scheme="http://aliyunceo.github.io/tags/nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>lua基础知识总结</title>
