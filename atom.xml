@@ -51,7 +51,7 @@
     <link href="http://aliyunceo.github.io/2020/11/30/huan-cun-yu-re-er-ji-huan-cun-cha-xun/"/>
     <id>http://aliyunceo.github.io/2020/11/30/huan-cun-yu-re-er-ji-huan-cun-cha-xun/</id>
     <published>2020-11-30T13:30:49.000Z</published>
-    <updated>2020-11-30T13:55:11.052Z</updated>
+    <updated>2020-11-30T14:21:08.382Z</updated>
     
     <summary type="html">
     
@@ -97,6 +97,33 @@
     
     
       <category term="nginx" scheme="http://aliyunceo.github.io/tags/nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nginx+lua+redis实现广告缓存</title>
+    <link href="http://aliyunceo.github.io/2020/11/29/nginx-lua-redis-shi-xian-guang-gao-huan-cun/"/>
+    <id>http://aliyunceo.github.io/2020/11/29/nginx-lua-redis-shi-xian-guang-gao-huan-cun/</id>
+    <published>2020-11-29T11:59:45.000Z</published>
+    <updated>2020-11-29T11:59:45.330Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
     
   </entry>
   

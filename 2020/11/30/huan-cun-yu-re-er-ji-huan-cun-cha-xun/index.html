@@ -493,9 +493,9 @@ daovoice('update');
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h3 id="1-实现缓存预热和二级缓存查询"><a href="#1-实现缓存预热和二级缓存查询" class="headerlink" title="1.实现缓存预热和二级缓存查询"></a>1.实现缓存预热和二级缓存查询</h3><p>步骤一：编写lua脚本实现缓存预热（将mysql里的数据查询出来存入redis）</p>
-<p><img src="/2020/11/30/huan-cun-yu-re-er-ji-huan-cun-cha-xun/blog\blog\source_posts\缓存预热-二级缓存查询\1.jpg"></p>
+<p><img src="/2020/11/30/huan-cun-yu-re-er-ji-huan-cun-cha-xun/1.jpg"></p>
 <p>步骤二：编写lua脚本实现二级缓存读取</p>
-<p><img src="/2020/11/30/huan-cun-yu-re-er-ji-huan-cun-cha-xun/blog\blog\source_posts\缓存预热-二级缓存查询\2.jpg"></p>
+<p><img src="/2020/11/30/huan-cun-yu-re-er-ji-huan-cun-cha-xun/2.jpg"></p>
 <h3 id="2-代码实现缓存预热"><a href="#2-代码实现缓存预热" class="headerlink" title="2.代码实现缓存预热"></a>2.代码实现缓存预热</h3><p>实现思路：</p>
 <p>定义请求：用于查询数据库中的数据更新到redis中。</p>
 <p>（1）连接mysql ，按照广告分类ID读取广告列表，转换为json字符串。</p>
@@ -1244,7 +1244,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">19.7k</span>&nbsp;字
+                class="white-color">19.8k</span>&nbsp;字
             
             
             

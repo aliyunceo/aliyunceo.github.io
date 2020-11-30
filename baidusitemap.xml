@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://aliyunceo.github.io/2020/11/30/nginx-xian-liu/</loc>
-    <lastmod>2020-11-30</lastmod>
-  </url>
-  <url>
     <loc>http://aliyunceo.github.io/2020/11/30/huan-cun-yu-re-er-ji-huan-cun-cha-xun/</loc>
     <lastmod>2020-11-30</lastmod>
   </url>
   <url>
+    <loc>http://aliyunceo.github.io/2020/11/30/nginx-xian-liu/</loc>
+    <lastmod>2020-11-30</lastmod>
+  </url>
+  <url>
     <loc>http://aliyunceo.github.io/2020/11/29/nginx-de-san-da-gong-neng/</loc>
+    <lastmod>2020-11-29</lastmod>
+  </url>
+  <url>
+    <loc>http://aliyunceo.github.io/2020/11/29/nginx-lua-redis-shi-xian-guang-gao-huan-cun/</loc>
     <lastmod>2020-11-29</lastmod>
   </url>
   <url>
