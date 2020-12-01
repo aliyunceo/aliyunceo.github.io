@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>springboot和canal集成包的安装</title>
+      <link href="/2020/12/01/springboot-he-canal-ji-cheng-bao-de-an-zhuang/"/>
+      <url>/2020/12/01/springboot-he-canal-ji-cheng-bao-de-an-zhuang/</url>
+      
+        <content type="html"><![CDATA[<p>当用户执行数据库的操作的时候，binlog 日志会被canal捕获到，并解析出数据。我们就可以将解析出来的数据进行相应的逻辑处理。</p><p>我们这里使用的一个开源的项目，它实现了springboot与canal的集成。比原生的canal更加优雅。</p><p>使用前需要将starter-canal安装到本地仓库。</p><p>安装步骤</p><h4 id="1-打开链接"><a href="#1-打开链接" class="headerlink" title="1.打开链接"></a>1.打开链接</h4><p><a href="https://github.com/chenqian56131/spring-boot-starter-canal">https://github.com/chenqian56131/spring-boot-starter-canal</a></p><h4 id="2-下载压缩包到本地并解压"><a href="#2-下载压缩包到本地并解压" class="headerlink" title="2.下载压缩包到本地并解压"></a>2.下载压缩包到本地并解压</h4><p><img src="/2020/12/01/springboot-he-canal-ji-cheng-bao-de-an-zhuang/1.jpg"></p><h4 id="3-解压文件后找到对应的目录"><a href="#3-解压文件后找到对应的目录" class="headerlink" title="3.解压文件后找到对应的目录"></a>3.解压文件后找到对应的目录</h4><p><img src="/2020/12/01/springboot-he-canal-ji-cheng-bao-de-an-zhuang/2.jpg"></p><h4 id="4-在当前目录打开cmd窗口输入命令："><a href="#4-在当前目录打开cmd窗口输入命令：" class="headerlink" title="4.在当前目录打开cmd窗口输入命令："></a>4.在当前目录打开cmd窗口输入命令：</h4><p>mvn clean install -DskipTests   安装到本地仓库，并跳过测试</p><p><img src="/2020/12/01/springboot-he-canal-ji-cheng-bao-de-an-zhuang/3.jpg"></p><h4 id="5-完成安装"><a href="#5-完成安装" class="headerlink" title="5.完成安装"></a>5.完成安装</h4><p><img src="/2020/12/01/springboot-he-canal-ji-cheng-bao-de-an-zhuang/4.jpg"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> canal </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>nginx限流</title>
       <link href="/2020/11/30/nginx-xian-liu/"/>
       <url>/2020/11/30/nginx-xian-liu/</url>
@@ -55,19 +74,6 @@
             <tag> nginx </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>nginx+lua+redis实现广告缓存</title>
-      <link href="/2020/11/29/nginx-lua-redis-shi-xian-guang-gao-huan-cun/"/>
-      <url>/2020/11/29/nginx-lua-redis-shi-xian-guang-gao-huan-cun/</url>
-      
-        <content type="html"><![CDATA[<script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
-      
-      
       
     </entry>
     
