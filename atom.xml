@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2020-12-01T10:33:41.648Z</updated>
+  <updated>2020-12-02T14:55:36.615Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>jdbc与mybatis</title>
+    <link href="http://aliyunceo.github.io/2020/12/02/jdbc-yu-mybatis/"/>
+    <id>http://aliyunceo.github.io/2020/12/02/jdbc-yu-mybatis/</id>
+    <published>2020-12-02T14:24:10.000Z</published>
+    <updated>2020-12-02T14:55:36.615Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-ORM&quot;&gt;&lt;a href=&quot;#1-ORM&quot; class=&quot;headerlink&quot; title=&quot;1.ORM&quot;&gt;&lt;/a&gt;1.ORM&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;ORM(Object Relational Mapping)：
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="mybatis" scheme="http://aliyunceo.github.io/tags/mybatis/"/>
+    
+  </entry>
   
   <entry>
     <title>springboot和canal集成包的安装</title>

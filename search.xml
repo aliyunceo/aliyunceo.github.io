@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>jdbc与mybatis</title>
+      <link href="/2020/12/02/jdbc-yu-mybatis/"/>
+      <url>/2020/12/02/jdbc-yu-mybatis/</url>
+      
+        <content type="html"><![CDATA[<h4 id="1-ORM"><a href="#1-ORM" class="headerlink" title="1.ORM"></a>1.ORM</h4><ul><li><p>ORM(Object Relational Mapping)： 对象关系映射</p></li><li><p>指的是持久化数据和实体对象的映射模式，为了解决面向对象与关系型数据库存在的互不匹配的现象的技术。</p></li></ul><p><img src="/2020/12/02/jdbc-yu-mybatis/1.jpg"></p><h4 id="2-原始jdbc操作（查询数据）"><a href="#2-原始jdbc操作（查询数据）" class="headerlink" title="2.原始jdbc操作（查询数据）"></a>2.原始jdbc操作（查询数据）</h4><p><img src="/2020/12/02/jdbc-yu-mybatis/2.jpg"></p><h4 id="3-原始jdbc操作（插入数据）"><a href="#3-原始jdbc操作（插入数据）" class="headerlink" title="3.原始jdbc操作（插入数据）"></a>3.原始jdbc操作（插入数据）</h4><p><img src="/2020/12/02/jdbc-yu-mybatis/3.jpg"></p><h4 id="4-原始jdbc操作的分析"><a href="#4-原始jdbc操作的分析" class="headerlink" title="4.原始jdbc操作的分析"></a>4.原始jdbc操作的分析</h4><ul><li><p>原始 JDBC 的操作问题分析 </p><p>​    1.频繁创建和销毁数据库的连接会造成系统资源浪费从而影响系统性能。</p><pre><code>2. sql 语句在代码中硬编码，如果要修改 sql 语句，就需要修改 java 代码，造成代码不易维护。3. 查询操作时，需要手动将结果集中的数据封装到实体对象中。4. 增删改查操作需要参数时，需要手动将实体对象的数据设置到 sql 语句的占位符。 </code></pre></li><li><p>原始 JDBC 的操作问题解决方案 </p><p>​    1.使用数据库连接池初始化连接资源。 </p><ol start="2"><li>将 sql 语句抽取到配置文件中。 </li><li>使用反射、内省等底层技术，将实体与表进行属性与字段的自动映射    </li></ol></li></ul><blockquote><p>mybatis 是一个优秀的基于java的持久层框架，它内部封装了jdbc，使开发者只需要关注sql语句本身，而不需要花费精力去处理加载驱动、创建连接、创建statement等繁杂的过程。</p></blockquote><blockquote><p>mybatis通过xml或注解的方式将要执行的各种 statement配置起来，并通过java对象和statement中sql的动态参数进行映射生成最终执行的sql语句。</p></blockquote><blockquote><p>最后mybatis框架执行sql并将结果映射为java对象并返回。采用ORM思想解决了实体和数据库映射的问题，对jdbc 进行了封装，屏蔽了jdbc api 底层访问细节，使我们不用与jdbc api 打交道，就可以完成对数据库的持久化操作。</p></blockquote><h4 id="5-MyBatis开发步骤："><a href="#5-MyBatis开发步骤：" class="headerlink" title="5.MyBatis开发步骤："></a>5.MyBatis开发步骤：</h4><p>①添加MyBatis的jar包</p><p>②创建Student数据表</p><p>③编写Studentr实体类 </p><p>④编写映射文件StudentMapper.xml</p><p>⑤编写核心文件MyBatisConfig.xml</p><p>⑥编写测试类</p><p>6.映射文件编写（StudentMapper.xml）</p><!--?xml version="1.0" encoding="UTF-8" ?--><!--MyBatis的DTD约束--><!--    mapper：核心根标签    namespace属性：名称空间--><mapper namespace="StudentMapper">    <!--        select：查询功能的标签        id属性：唯一标识        resultType属性：指定结果映射对象类型        parameterType属性：指定参数映射对象类型    --><pre><code>&lt;select id="selectAll" resultType="student"&gt;    SELECT * FROM student&lt;/select&gt;</code></pre></mapper><p>7.核心文件编写</p><!--?xml version="1.0" encoding="UTF-8" ?--><!--MyBatis的DTD约束--><!--configuration 核心根标签--><configuration><pre><code>&lt;!--引入数据库连接的配置文件--&gt;&lt;properties resource="jdbc.properties"/&gt;&lt;!--配置LOG4J--&gt;&lt;settings&gt;    &lt;setting name="logImpl" value="log4j"/&gt;&lt;/settings&gt;&lt;!--起别名--&gt;&lt;typeAliases&gt;    &lt;typeAlias type="com.itheima.bean.Student" alias="student"/&gt;    &lt;!--&lt;package name="com.itheima.bean"/&gt;--&gt;&lt;/typeAliases&gt;&lt;!--environments配置数据库环境，环境可以有多个。default属性指定使用的是哪个--&gt;&lt;environments default="mysql"&gt;    &lt;!--environment配置数据库环境  id属性唯一标识--&gt;    &lt;environment id="mysql"&gt;        &lt;!-- transactionManager事务管理。  type属性，采用JDBC默认的事务--&gt;        &lt;transactionManager type="JDBC"&gt;&lt;/transactionManager&gt;        &lt;!-- dataSource数据源信息   type属性 连接池--&gt;        &lt;dataSource type="POOLED"&gt;            &lt;!-- property获取数据库连接的配置信息 --&gt;            &lt;property name="driver" value="${driver}" /&gt;            &lt;property name="url" value="${url}" /&gt;            &lt;property name="username" value="${username}" /&gt;            &lt;property name="password" value="${password}" /&gt;        &lt;/dataSource&gt;    &lt;/environment&gt;&lt;/environments&gt;&lt;!-- mappers引入映射配置文件 --&gt;&lt;mappers&gt;    &lt;!-- mapper 引入指定的映射配置文件   resource属性指定映射配置文件的名称 --&gt;    &lt;mapper resource="StudentMapper.xml"/&gt;&lt;/mappers&gt;</code></pre></configuration><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> mybatis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>springboot和canal集成包的安装</title>
       <link href="/2020/12/01/springboot-he-canal-ji-cheng-bao-de-an-zhuang/"/>
       <url>/2020/12/01/springboot-he-canal-ji-cheng-bao-de-an-zhuang/</url>
