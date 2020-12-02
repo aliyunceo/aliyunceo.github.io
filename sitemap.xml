@@ -179,14 +179,14 @@
 
   
   <url>
-    <loc>http://aliyunceo.github.io/tags/SpringCloud/</loc>
+    <loc>http://aliyunceo.github.io/tags/sql/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://aliyunceo.github.io/tags/sql/</loc>
+    <loc>http://aliyunceo.github.io/tags/SpringCloud/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -207,14 +207,14 @@
   </url>
   
   <url>
-    <loc>http://aliyunceo.github.io/tags/mybatis/</loc>
+    <loc>http://aliyunceo.github.io/tags/lua/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://aliyunceo.github.io/tags/lua/</loc>
+    <loc>http://aliyunceo.github.io/tags/mybatis/</loc>
     <lastmod>2020-12-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
