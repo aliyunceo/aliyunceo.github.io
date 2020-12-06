@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2020-12-05T14:54:03.067Z</updated>
+  <updated>2020-12-06T15:10:12.134Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>深入理解mybatis复杂映射</title>
+    <link href="http://aliyunceo.github.io/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/"/>
+    <id>http://aliyunceo.github.io/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/</id>
+    <published>2020-12-06T09:37:23.000Z</published>
+    <updated>2020-12-06T15:10:12.134Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;1.配置映射&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一对一：实现业务 查询一个订单，于此同时查询出该订单所属的用户信息&lt;/p&gt;
+&lt;p&gt;sql：select *from orders o,user u where o.uid
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="mybatis" scheme="http://aliyunceo.github.io/tags/mybatis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>深入理解mybatis的配置文件</title>
+    <link href="http://aliyunceo.github.io/2020/12/06/shen-ru-li-jie-mybatis-de-pei-zhi-wen-jian/"/>
+    <id>http://aliyunceo.github.io/2020/12/06/shen-ru-li-jie-mybatis-de-pei-zhi-wen-jian/</id>
+    <published>2020-12-06T03:20:57.000Z</published>
+    <updated>2020-12-06T09:30:27.007Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-SqlMapConfig-xml文件&quot;&gt;&lt;a href=&quot;#1-SqlMapConfig-xml文件&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="mybatis" scheme="http://aliyunceo.github.io/tags/mybatis/"/>
+    
+  </entry>
   
   <entry>
     <title>自定义持久层框架</title>

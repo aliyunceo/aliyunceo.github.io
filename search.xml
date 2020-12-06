@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>深入理解mybatis复杂映射</title>
+      <link href="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/"/>
+      <url>/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/</url>
+      
+        <content type="html"><![CDATA[<p>1.配置映射</p><blockquote><p>一对一：实现业务 查询一个订单，于此同时查询出该订单所属的用户信息</p><p>sql：select *from orders o,user u where o.uid =u.id</p></blockquote><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/1.png"></p><p>问题分析：</p><p>resultType：mybatis自定按照字段名和属性名完成映射封装，但是user在order表中无法完成映射</p><p>解决方案：</p><p>resultMap：手动配置实体属性与表字段的映射关系</p><p>方法一：</p><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/2.png"></p><p>方法二：</p><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/4.png"></p><p>引入映射文件</p><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/5.png"></p><blockquote><p>配置文件所在的包必须和mapper接口所在的包一致</p></blockquote><blockquote><p>一对多：实现业务 查询全部用户 于此同时查询出每个用户具有的订单信息    </p><p>业务分析：查询出所有的用户 没有关联订单信息的用户也需要查询出来   因此要使用外连接，不能使用内连接</p><p>select *,o.id oid from user u left join orders o on u.id=o.uid;</p><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/6.png"></p></blockquote><blockquote><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/7.png"></p></blockquote><blockquote><p>多对多: 业务  查询用户同时查询出该用户的所有角色</p><p>业务分析：一个用户对应多个角色，一个角色被多个用户使用 </p><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/8.png"></p></blockquote><blockquote><p>sql:：select u.,r.,r.id rid from user u left join user_role ur on u.id=ur.user_id inner join role r on ur.role_id=r.id;</p><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/9.png"></p></blockquote><blockquote><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/10.png"></p></blockquote><p>2.注解crud</p><p>mybatis常用注解</p><blockquote><p> @Insert：实现新增</p><p> @Update：实现更新</p><p> @Delete：实现删除</p><p> @Select：实现查询</p><p> @Result：实现结果集封装</p><p> @Results：可以与</p><p> @Result 一起使用，封装多个结果集 </p><p> @One：实现一对一结果集封装 </p><p> @Many：实现一对多结果集封装</p></blockquote><p>增删改查注解实现</p><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/11.png"></p><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/12.png"></p><p>引入配置文件的方式</p><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/13.png">3.注解映射</p><blockquote><p>一对一</p></blockquote><blockquote><p>一对多</p></blockquote><blockquote><p>多对多</p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> mybatis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深入理解mybatis的配置文件</title>
+      <link href="/2020/12/06/shen-ru-li-jie-mybatis-de-pei-zhi-wen-jian/"/>
+      <url>/2020/12/06/shen-ru-li-jie-mybatis-de-pei-zhi-wen-jian/</url>
+      
+        <content type="html"><![CDATA[<h3 id="1-SqlMapConfig-xml文件"><a href="#1-SqlMapConfig-xml文件" class="headerlink" title="1.SqlMapConfig.xml文件"></a>1.SqlMapConfig.xml文件</h3><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-de-pei-zhi-wen-jian/1.png"></p><p>mybatis常用标签解析</p><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-de-pei-zhi-wen-jian/2.png"></p><p>事务管理器（transactionManager）类型：</p><blockquote><p>JDBC：这个配置就是直接使用了JDBC 的提交和回滚设置，它依赖于从数据源得到的连接来管理事务作 用域。</p><p>MANAGED：它从来不提交或回滚一个连接，而是让容器来管理事务的整个生命周期（比如 JEE 应用服务器的上下文）。 默认情况下它会关闭连接，然而一些容器并不希望这样，因此需要将 closeConnection 属性设置为 false 来阻止它默认的关闭行为。</p></blockquote><p>数据源（dataSource）类型有三种：</p><blockquote><p>UNPOOLED：每次被请求时打开和关闭连接。</p><p>POOLED：使用mybatis提供的连接池。</p><p>JNDI：这个数据源的实现是为了能在如 EJB 或应用服务器这类容器中使用，容器可以集中或在外部配 置数据源，然后放置一个 JNDI 上下文的引用。</p></blockquote><p>mapper标签</p><blockquote><p>使用相对于类路径的资源引用，例如：</p><mapper resource="org/mybatis/builder/AuthorMapper.xml"><p>使用完全限定资源定位符（URL），例如：</p> <mapper url="file:///var/mappers/AuthorMapper.xml"><p>使用映射器接口实现类的完全限定类名，例如：</p><mapper class="org.mybatis.builder.AuthorMapper"><p>将包内的映射器接口实现全部注册为映射器，例如：</p><package name="org.mybatis.builder"></package></mapper></mapper></mapper></blockquote><p>properties标签</p><blockquote><p>实际开发中，习惯将数据源的配置信息单独抽取成一个properties文件，该标签可以加载额外配置的 properties文件</p></blockquote><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-de-pei-zhi-wen-jian/3.png"></p><p>typeAliases标签</p><p>给全限定类名起别名。原来的类型名称配置如下</p><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-de-pei-zhi-wen-jian/4.png"></p><blockquote><p>上面的情况只适合给单独的实体起别名，当有很多的实体类时，我们可以采用：</p><p><package name="包名">  批量起别名  ：该包下所有的类的本身的别名，别名不区分大小写</package></p></blockquote><p>上面是自定义的别名，mybatis框架已经为我们设置好的一些常用的类型的别名</p><h3 id="2-mapper-xml文件"><a href="#2-mapper-xml文件" class="headerlink" title="2.mapper.xml文件"></a><img src="/2020/12/06/shen-ru-li-jie-mybatis-de-pei-zhi-wen-jian/5.png">2.mapper.xml文件</h3><p>Mybatis 的映射文件中，前面我们的 SQL 都是比较简单的，有些时候业务逻辑复杂时，我们的 SQL是 动态变化的，此时在前面的学习中我们的 SQL 就不能满足要求了。</p><h4 id="2-1动态sql–-gt-if-多条件组合查询"><a href="#2-1动态sql–-gt-if-多条件组合查询" class="headerlink" title="2.1动态sql–>if    多条件组合查询"></a>2.1动态sql–&gt;if    多条件组合查询</h4><p>根据实体类的不同取值，使用不同的 SQL语句来进行查询。比如在 id如果不为空时可以根据id查 询，如果username 不同空时还要加入用户名作为条件。这种情况在我们的多条件组合查询中经常会碰到。</p><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-de-pei-zhi-wen-jian/6.png"></p><h4 id="2-2动态sql–-gt-foreach"><a href="#2-2动态sql–-gt-foreach" class="headerlink" title="2.2动态sql–>foreach"></a>2.2动态sql–&gt;foreach</h4><p>循环执行sql的拼接操作    例如：SELECT * FROM USER WHERE id IN (1,2,5)。</p><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-de-pei-zhi-wen-jian/7.png"></p><blockquote><p>open拼接的是条件的开始部分   </p><p>close是条件的结束部分 </p><p>item接收当前遍历出来的值</p><p>separator定义分隔符     </p></blockquote><p>sql片段的抽取 ：Sql 中可将重复的 sql 提取出来，使用时用 include 引用即可，最终达到 sql 重用的目的</p><p><img src="/2020/12/06/shen-ru-li-jie-mybatis-de-pei-zhi-wen-jian/8.png"></p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> mybatis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>自定义持久层框架</title>
       <link href="/2020/12/05/zi-ding-yi-chi-jiu-ceng-kuang-jia/"/>
       <url>/2020/12/05/zi-ding-yi-chi-jiu-ceng-kuang-jia/</url>
