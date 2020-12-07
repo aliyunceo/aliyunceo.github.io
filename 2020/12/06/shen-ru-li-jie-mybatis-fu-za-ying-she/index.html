@@ -463,21 +463,21 @@ daovoice('update');
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-12-06
+                    2020-12-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    461
+                    525
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -550,14 +550,27 @@ daovoice('update');
 <p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/12.png"></p>
 <p>引入配置文件的方式</p>
 <p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/13.png">3.注解映射</p>
+<p>@Results注解</p>
+<p>@Result注解</p>
+<p>@One注解</p>
+<p>@Many</p>
 <blockquote>
 <p>一对一</p>
+<p>sql:select * from orders; </p>
+<p>​      select * from user where id=查询出订单的uid;</p>
+<p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/14.png"></p>
 </blockquote>
 <blockquote>
 <p>一对多</p>
+<p>sql:select * from user;</p>
+<p>​      select * from orders where uid=查询出用户的id;</p>
+<p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/15.png"></p>
 </blockquote>
 <blockquote>
 <p>多对多</p>
+<p>sql:select * from user;</p>
+<p>​      select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的id</p>
+<p><img src="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/16.png"></p>
 </blockquote>
 <script>
         document.querySelectorAll('.github-emoji')
@@ -855,37 +868,33 @@ daovoice('update');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/">
+                <a href="/2020/12/07/shen-ru-li-jie-mybatis-de-huan-cun-ji-zhu/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="深入理解mybatis复杂映射">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="深入理解mybatis的缓存技术">
                         
-                        <span class="card-title">深入理解mybatis复杂映射</span>
+                        <span class="card-title">深入理解mybatis的缓存技术</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1.配置映射
-
-一对一：实现业务 查询一个订单，于此同时查询出该订单所属的用户信息
-sql：select *from orders o,user u where o.uid =u.id
+                            1.缓存介绍缓存就是内存中的数据，常常来自对数据库查询结果的保存，使用缓存，我们可以避免频繁的与数据库进行交互，进而提高响应速度
+mybatis也提供了对缓存的支持，分为一级缓存和二级缓存，可以通过下图来理解：
 
 
-问题分析：
-resultType：mybatis自
+一级缓存是SqlSess
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-07
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -894,7 +903,6 @@ resultType：mybatis自
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1157,7 +1165,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">22.9k</span>&nbsp;字
+                class="white-color">24.8k</span>&nbsp;字
             
             
             

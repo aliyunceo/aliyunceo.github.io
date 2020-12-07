@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2020-12-06T15:10:12.134Z</updated>
+  <updated>2020-12-07T14:58:44.938Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>深入理解mybatis的缓存技术</title>
+    <link href="http://aliyunceo.github.io/2020/12/07/shen-ru-li-jie-mybatis-de-huan-cun-ji-zhu/"/>
+    <id>http://aliyunceo.github.io/2020/12/07/shen-ru-li-jie-mybatis-de-huan-cun-ji-zhu/</id>
+    <published>2020-12-07T04:10:45.000Z</published>
+    <updated>2020-12-07T14:58:44.938Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-缓存介绍&quot;&gt;&lt;a href=&quot;#1-缓存介绍&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="mybatis" scheme="http://aliyunceo.github.io/tags/mybatis/"/>
+    
+  </entry>
+  
+  <entry>
     <title>深入理解mybatis复杂映射</title>
     <link href="http://aliyunceo.github.io/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/"/>
     <id>http://aliyunceo.github.io/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/</id>
     <published>2020-12-06T09:37:23.000Z</published>
-    <updated>2020-12-06T15:10:12.134Z</updated>
+    <updated>2020-12-07T03:43:32.951Z</updated>
     
     <summary type="html">
     
@@ -74,7 +99,7 @@
     <link href="http://aliyunceo.github.io/2020/12/05/zi-ding-yi-chi-jiu-ceng-kuang-jia/"/>
     <id>http://aliyunceo.github.io/2020/12/05/zi-ding-yi-chi-jiu-ceng-kuang-jia/</id>
     <published>2020-12-05T06:35:33.000Z</published>
-    <updated>2020-12-05T14:54:03.067Z</updated>
+    <updated>2020-12-07T14:59:29.833Z</updated>
     
     <summary type="html">
     
@@ -500,32 +525,6 @@
         
         
           &lt;h2 id=&quot;1-1-什么是消息中间件&quot;&gt;&lt;a href=&quot;#1-1-什么是消息中间件&quot; class=&quot;headerlink&quot; title=&quot;1.1. 什么是消息中间件&quot;&gt;&lt;/a&gt;1.1. 什么是消息中间件&lt;/h2&gt;&lt;p&gt;MQ全称为Message
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="RabbitMQ" scheme="http://aliyunceo.github.io/tags/RabbitMQ/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RabbitMQ安装说明</title>
-    <link href="http://aliyunceo.github.io/2020/08/07/rabbitmq-an-zhuang-shuo-ming/"/>
-    <id>http://aliyunceo.github.io/2020/08/07/rabbitmq-an-zhuang-shuo-ming/</id>
-    <published>2020-08-07T15:24:23.000Z</published>
-    <updated>2020-08-08T03:59:04.538Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-安装依赖环境&quot;&gt;&lt;a href=&quot;#1-安装依赖环境&quot; class=&quot;headerlink&quot; title=&quot;1. 安装依赖环境&quot;&gt;&lt;/a&gt;1. 安装依赖环境&lt;/h2&gt;&lt;p&gt;在线安装依赖环境：&lt;/p&gt;
-&lt;pre class=&quot;
         
       
     

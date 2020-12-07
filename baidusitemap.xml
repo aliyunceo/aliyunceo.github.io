@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://aliyunceo.github.io/2020/12/05/zi-ding-yi-chi-jiu-ceng-kuang-jia/</loc>
+    <lastmod>2020-12-07</lastmod>
+  </url>
+  <url>
+    <loc>http://aliyunceo.github.io/2020/12/07/shen-ru-li-jie-mybatis-de-huan-cun-ji-zhu/</loc>
+    <lastmod>2020-12-07</lastmod>
+  </url>
+  <url>
     <loc>http://aliyunceo.github.io/2020/12/06/shen-ru-li-jie-mybatis-fu-za-ying-she/</loc>
-    <lastmod>2020-12-06</lastmod>
+    <lastmod>2020-12-07</lastmod>
   </url>
   <url>
     <loc>http://aliyunceo.github.io/2020/12/06/shen-ru-li-jie-mybatis-de-pei-zhi-wen-jian/</loc>
     <lastmod>2020-12-06</lastmod>
-  </url>
-  <url>
-    <loc>http://aliyunceo.github.io/2020/12/05/zi-ding-yi-chi-jiu-ceng-kuang-jia/</loc>
-    <lastmod>2020-12-05</lastmod>
   </url>
   <url>
     <loc>http://aliyunceo.github.io/2020/12/02/jdbc-yu-mybatis/</loc>
