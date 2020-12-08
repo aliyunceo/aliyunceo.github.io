@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2020-12-07T14:58:44.938Z</updated>
+  <updated>2020-12-08T15:41:57.551Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>对mybatis插件的研究</title>
+    <link href="http://aliyunceo.github.io/2020/12/08/dui-mybatis-cha-jian-de-yan-jiu/"/>
+    <id>http://aliyunceo.github.io/2020/12/08/dui-mybatis-cha-jian-de-yan-jiu/</id>
+    <published>2020-12-08T01:23:22.000Z</published>
+    <updated>2020-12-08T15:41:57.551Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;1-mybatis插件的机制与原理&quot;&gt;&lt;a href=&quot;#1-mybatis插件的机制与原理&quot; class=&quot;headerlink&quot; title=&quot;1.mybatis插件的机制与原理&quot;&gt;&lt;/a&gt;1.mybatis插件的机制与原理&lt;/h3&gt;&lt;h4
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="mybatis" scheme="http://aliyunceo.github.io/tags/mybatis/"/>
+    
+  </entry>
   
   <entry>
     <title>深入理解mybatis的缓存技术</title>
@@ -500,31 +525,6 @@
         
         
           &lt;h2 id=&quot;3-1-搭建示例工程&quot;&gt;&lt;a href=&quot;#3-1-搭建示例工程&quot; class=&quot;headerlink&quot; title=&quot;3.1. 搭建示例工程&quot;&gt;&lt;/a&gt;3.1. 搭建示例工程&lt;/h2&gt;&lt;h3 id=&quot;3-1-1-创建工程&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="RabbitMQ" scheme="http://aliyunceo.github.io/tags/RabbitMQ/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>消息中间件概述</title>
-    <link href="http://aliyunceo.github.io/2020/08/08/xiao-xi-zhong-jian-jian-gai-shu/"/>
-    <id>http://aliyunceo.github.io/2020/08/08/xiao-xi-zhong-jian-jian-gai-shu/</id>
-    <published>2020-08-08T13:40:30.000Z</published>
-    <updated>2020-08-08T15:12:04.419Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;1-1-什么是消息中间件&quot;&gt;&lt;a href=&quot;#1-1-什么是消息中间件&quot; class=&quot;headerlink&quot; title=&quot;1.1. 什么是消息中间件&quot;&gt;&lt;/a&gt;1.1. 什么是消息中间件&lt;/h2&gt;&lt;p&gt;MQ全称为Message
         
       
     
