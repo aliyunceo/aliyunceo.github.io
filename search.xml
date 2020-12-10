@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>mybatis的架构设计</title>
+      <link href="/2020/12/10/mybatis-de-jia-gou-she-ji/"/>
+      <url>/2020/12/10/mybatis-de-jia-gou-she-ji/</url>
+      
+        <content type="html"><![CDATA[<h4 id="1-架构图示"><a href="#1-架构图示" class="headerlink" title="1.架构图示"></a>1.架构图示</h4><p><img src="/2020/12/10/mybatis-de-jia-gou-she-ji/1.png"></p><blockquote><p>(1) API接口层：提供给外部使用的接口 API，开发人员通过这些本地API来操纵数据库。接口层一接收 到 调用请求就会调用数据处理层来完成具体的数据处理。</p><p> MyBatis和数据库的交互有两种方式：</p><pre><code> a. 使用传统的MyBati s提供的API ； b. 使用Mapper代理的方式</code></pre><p> (2) 数据处理层：负责具体的SQL查找、SQL解析、SQL执行和执行结果映射处理等。它主要的目的是根 据调用的请求完成一次数据库操作。</p><p> (3) 基础支撑层：负责最基础的功能支撑，包括连接管理、事务管理、配置加载和缓存处理，这些都是 共 用的东西，将他们抽取出来作为最基础的组件。为上层的数据处理层提供最基础的支撑</p><p><img src="/2020/12/10/mybatis-de-jia-gou-she-ji/2.png"></p></blockquote><blockquote><p><img src="/2020/12/10/mybatis-de-jia-gou-she-ji/3.png"></p></blockquote><h4 id="2-总结流程"><a href="#2-总结流程" class="headerlink" title="2.总结流程"></a>2.总结流程</h4><p>(1) 加载配置并初始化 触发条件：加载配置文件 配置来源于两个地方，一个是配置文件(主配置文件conf.xml,mapper文件*.xml),—个是java代码中的 注解，将主配置文件内容解析封装到Configuration,将sql的配置信息加载成为一个mappedstatement 对象，存储在内存之中 </p><p>(2) 接收调用请求 触发条件：调用Mybatis提供的API 传入参数：为SQL的ID和传入参数对象 处理过程：将请求传递给下层的请求处理层进行处理。</p><p>(3) 处理操作请求 触发条件：API接口层传递请求过来 传入参数：为SQL的ID和传入参数对象 处理过程：</p><p>​     (A) 根据SQL的ID查找对应的MappedStatement对象。</p><p>​     (B) 根据传入参数对象解析MappedStatement对象，得到最终要执行的SQL和执行传入参数。</p><p>​     (C) 获取数据库连接，根据得到的最终SQL语句和执行传入参数到数据库执行，并得到执行结果。</p><p>​     (D) 根据MappedStatement对象中的结果映射配置对得到的执行结果进行转换处理，并得到最终的处理结果。</p><p>(E) 释放连接资源。 </p><p>(4) 返回处理结果 将最终的处理结果返回。</p><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> mybatis </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>对mybatis插件的研究</title>
       <link href="/2020/12/08/dui-mybatis-cha-jian-de-yan-jiu/"/>
       <url>/2020/12/08/dui-mybatis-cha-jian-de-yan-jiu/</url>

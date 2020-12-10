@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2020-12-08T15:41:57.551Z</updated>
+  <updated>2020-12-10T07:19:21.209Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mybatis的架构设计</title>
+    <link href="http://aliyunceo.github.io/2020/12/10/mybatis-de-jia-gou-she-ji/"/>
+    <id>http://aliyunceo.github.io/2020/12/10/mybatis-de-jia-gou-she-ji/</id>
+    <published>2020-12-10T03:44:56.000Z</published>
+    <updated>2020-12-10T07:19:21.209Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-架构图示&quot;&gt;&lt;a href=&quot;#1-架构图示&quot; class=&quot;headerlink&quot; title=&quot;1.架构图示&quot;&gt;&lt;/a&gt;1.架构图示&lt;/h4&gt;&lt;p&gt;&lt;img
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="mybatis" scheme="http://aliyunceo.github.io/tags/mybatis/"/>
+    
+  </entry>
   
   <entry>
     <title>对mybatis插件的研究</title>
@@ -508,31 +533,6 @@
     
     
       <category term="SpringCloud" scheme="http://aliyunceo.github.io/tags/SpringCloud/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RabbitMQ基本程序编写</title>
-    <link href="http://aliyunceo.github.io/2020/08/09/rabbitmq-ji-ben-cheng-xu-bian-xie/"/>
-    <id>http://aliyunceo.github.io/2020/08/09/rabbitmq-ji-ben-cheng-xu-bian-xie/</id>
-    <published>2020-08-09T14:43:45.000Z</published>
-    <updated>2020-08-09T15:42:23.502Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;3-1-搭建示例工程&quot;&gt;&lt;a href=&quot;#3-1-搭建示例工程&quot; class=&quot;headerlink&quot; title=&quot;3.1. 搭建示例工程&quot;&gt;&lt;/a&gt;3.1. 搭建示例工程&lt;/h2&gt;&lt;h3 id=&quot;3-1-1-创建工程&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="RabbitMQ" scheme="http://aliyunceo.github.io/tags/RabbitMQ/"/>
     
   </entry>
   
