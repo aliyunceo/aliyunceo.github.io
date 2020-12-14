@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="缓存预热+二级缓存查询, 知否">
+    <meta name="keywords" content="各类实用网站, 知否">
 	<meta name="baidu-site-verification" content="xvbAoexk6z" />
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>缓存预热+二级缓存查询 | 知否</title>
+    <title>各类实用网站 | 知否</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -318,12 +318,12 @@ daovoice('update');
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">缓存预热+二级缓存查询</h1>
+                    <h1 class="description center-align post-title">各类实用网站</h1>
                 </div>
             </div>
         </div>
@@ -440,8 +440,8 @@ daovoice('update');
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E7%BC%93%E5%AD%98/">
-                                <span class="chip bg-color">缓存</span>
+                            <a href="/tags/%E5%B7%A5%E5%85%B7/">
+                                <span class="chip bg-color">工具</span>
                             </a>
                         
                     </div>
@@ -456,28 +456,28 @@ daovoice('update');
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-30
+                    2020-12-14
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-30
+                    2020-12-14
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    843
+                    73
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -492,161 +492,18 @@ daovoice('update');
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="1-实现缓存预热和二级缓存查询"><a href="#1-实现缓存预热和二级缓存查询" class="headerlink" title="1.实现缓存预热和二级缓存查询"></a>1.实现缓存预热和二级缓存查询</h3><p>步骤一：编写lua脚本实现缓存预热（将mysql里的数据查询出来存入redis）</p>
-<p><img src="/2020/11/30/huan-cun-yu-re-er-ji-huan-cun-cha-xun/1.jpg"></p>
-<p>步骤二：编写lua脚本实现二级缓存读取</p>
-<p><img src="/2020/11/30/huan-cun-yu-re-er-ji-huan-cun-cha-xun/2.jpg"></p>
-<h3 id="2-代码实现缓存预热"><a href="#2-代码实现缓存预热" class="headerlink" title="2.代码实现缓存预热"></a>2.代码实现缓存预热</h3><p>实现思路：</p>
-<p>定义请求：用于查询数据库中的数据更新到redis中。</p>
-<p>（1）连接mysql ，按照广告分类ID读取广告列表，转换为json字符串。</p>
-<p>（2）连接redis，将广告列表json字符串存入redis 。</p>
-<p>定义请求：</p>
-<pre class=" language-shell"><code class="language-shell">请求：
-    /ad_update
-参数：
-    position  --指定广告位置
-返回值：
-    json</code></pre>
-<p>在/root/lua目录下创建ad_load.lua ，实现连接mysql 查询数据 并存储到redis中。</p>
-<pre class=" language-shell"><code class="language-shell">ngx.header.content_type="application/json;charset=utf8"
-local cjson = require("cjson")
-local mysql = require("resty.mysql")
-local uri_args = ngx.req.get_uri_args()
-local position = uri_args["position"]
-
-local db = mysql:new()
-db:set_timeout(1000)  
-local props = &#123;  
-    host = "192.168.200.128",  
-    port = 3306,  
-    database = "changgou_business",  
-    user = "root",  
-    password = "root"  
-&#125;
-
-local res = db:connect(props)  
-local select_sql = "select url,image from tb_ad where status ='1' and position='"..position.."' and start_time<= NOW() AND end_time>= NOW()"  
-res = db:query(select_sql)  
-db:close()  
-
-local redis = require("resty.redis")
-local red = redis:new()
-red:set_timeout(2000)
-
-local ip ="192.168.200.128"
-local port = 6379
-red:connect(ip,port)
-
-red:set("ad_"..position,cjson.encode(res))
-red:close()
-
-ngx.say("&#123;flag:true&#125;")</code></pre>
-<p>修改/usr/local/openresty/nginx/conf/nginx.conf文件：</p>
-<p>代码如下：</p>
-<pre class=" language-shell"><code class="language-shell">#user  nobody;
-user root root;
-worker_processes  1;
-
-#error_log  logs/error.log;
-#error_log  logs/error.log  notice;
-#error_log  logs/error.log  info;
-
-#pid        logs/nginx.pid;
-
-events &#123;
-    worker_connections  1024;
-&#125;
-
-http &#123;
-    include       mime.types;
-    default_type  application/octet-stream;
-    sendfile        on;
-    #tcp_nopush     on;
-
-    #keepalive_timeout  0;
-    keepalive_timeout  65;
-
-    #gzip  on;
-
-    server &#123;
-        listen       80;
-        server_name  localhost;
-        charset utf-8;
-        #access_log  logs/host.access.log  main;
-        # 添加
-        location /ad_update &#123;
-            content_by_lua_file /root/lua/ad_update.lua;
-        &#125;
-
-        # redirect server error pages to the static page /50x.html
-        #
-        error_page   500 502 503 504  /50x.html;
-        location = /50x.html &#123;
-            root   html;
-        &#125;        
-    &#125;
-&#125;</code></pre>
-<p>重新启动nginx</p>
-<p>测试：<a target="_blank" rel="noopener" href="http://192.168.200.128/ad_update?position=web_index_lb">http://192.168.200.128/ad_update?position=web_index_lb</a></p>
-<h3 id="3-代码实现缓存读取"><a href="#3-代码实现缓存读取" class="headerlink" title="3.代码实现缓存读取"></a>3.代码实现缓存读取</h3><p>实现思路：</p>
-<p>通过lua脚本直接从redis中获取数据即可。</p>
-<p>定义请求：</p>
-<pre class=" language-shell"><code class="language-shell">请求:/ad_read
-参数：position
-返回值：json</code></pre>
-<p>在/root/lua目录下创建ad_read.lua</p>
-<pre class=" language-shell"><code class="language-shell">
-ngx.header.content_type="application/json;charset=utf8"
-
-local uri_args = ngx.req.get_uri_args();
-local position = uri_args["position"];
-
-local redis = require("resty.redis");
-
-local red = redis:new()
-
-red:set_timeout(2000)
-
-local ok, err = red:connect("192.168.200.128", 6379)
-
-local rescontent=red:get("ad_"..position)
-
-ngx.say(rescontent)
-
-red:close()</code></pre>
-<p>在/usr/local/openresty/nginx/conf/nginx.conf中server下添加配置</p>
-<pre class=" language-shell"><code class="language-shell">location /ad_read &#123;
-  content_by_lua_file /root/lua/ad_read.lua;
-&#125;</code></pre>
-<p>测试 <a target="_blank" rel="noopener" href="http://192.168.200.128/ad_read?position=web_index_lb">http://192.168.200.128/ad_read?position=web_index_lb</a> 输出</p>
-<pre><code>[&amp;#123;"url":"img\/banner1.jpg","image":"img\/banner1.jpg"&amp;#125;,&amp;#123;"url":"img\/banner2.jpg","image":"img\/banner2.jpg"&amp;#125;]</code></pre>
-<h3 id="4-二级缓存-加入openresty本地缓存"><a href="#4-二级缓存-加入openresty本地缓存" class="headerlink" title="4.二级缓存-加入openresty本地缓存"></a>4.二级缓存-加入openresty本地缓存</h3><p>如上的方式没有问题，但是如果请求都到redis，redis压力也很大，所以我们一般采用多级缓存的方式来减少下游系统的服务压力。</p>
-<p>先查询openresty本地缓存 如果没有再查询redis中的数据</p>
-<ul>
-<li>修改/root/lua目录下ad_read文件, 内容如下:</li>
-</ul>
-<pre class=" language-shell"><code class="language-shell">ngx.header.content_type="application/json;charset=utf8"
-local uri_args = ngx.req.get_uri_args();
-local position = uri_args["position"];
-local cache_ngx = ngx.shared.dis_cache;
-local adCache = cache_ngx:get('ad_cache_'..position);
-if adCache == "" or adCache == nil then
-    local redis = require("resty.redis");
-    local red = redis:new()
-    red:set_timeout(2000)
-    local ok, err = red:connect("192.168.200.128", 6379)
-    local rescontent=red:get("ad_"..position)
-    ngx.say(rescontent)
-    red:close()
-    cache_ngx:set('ad_cache_'..position, rescontent, 10*60);
-else
-    ngx.say(adCache)
-end</code></pre>
-<ul>
-<li>修改nginx配置文件vi /usr/local/openresty/nginx/conf/nginx.conf ，http节点下添加配置:</li>
-</ul>
-<pre class=" language-shell"><code class="language-shell">#包含redis初始化模块
-lua_shared_dict dis_cache 5m;  #共享内存开启</code></pre>
+                <blockquote>
+<p>稿定设计： 批图</p>
+</blockquote>
+<blockquote>
+<p>Convertio：文件转换</p>
+</blockquote>
+<blockquote>
+<p>5118.com： 找数据</p>
+</blockquote>
+<blockquote>
+<p>officeplus：办公模板</p>
+</blockquote>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -690,7 +547,7 @@ lua_shared_dict dis_cache 5m;  #共享内存开启</code></pre>
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://aliyunceo.github.io/2020/11/30/huan-cun-yu-re-er-ji-huan-cun-cha-xun/">http://aliyunceo.github.io/2020/11/30/huan-cun-yu-re-er-ji-huan-cun-cha-xun/</a>
+                    <a href="http://aliyunceo.github.io/2020/12/14/ge-lei-shi-yong-wang-zhan/">http://aliyunceo.github.io/2020/12/14/ge-lei-shi-yong-wang-zhan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -728,8 +585,8 @@ lua_shared_dict dis_cache 5m;  #共享内存开启</code></pre>
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E7%BC%93%E5%AD%98/">
-                                    <span class="chip bg-color">缓存</span>
+                                <a href="/tags/%E5%B7%A5%E5%85%B7/">
+                                    <span class="chip bg-color">工具</span>
                                 </a>
                             
                         </div>
@@ -943,36 +800,44 @@ lua_shared_dict dis_cache 5m;  #共享内存开启</code></pre>
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/11/30/nginx-xian-liu/">
+                <a href="/2020/12/14/ge-lei-shi-yong-wang-zhan/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="nginx限流">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="各类实用网站">
                         
-                        <span class="card-title">nginx限流</span>
+                        <span class="card-title">各类实用网站</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            nginx限流的方式
-一般情况下，首页的并发量是比较大的，即使有了多级缓存，如果有大量恶意的请求，也会对系统造成影响。而限流就是保护措施之一。
-nginx提供两种限流的方式：
+                            
+稿定设计： 批图
 
-一是控制速率
-二是控制并发连接数
 
-1.控制速率控制速率的方式
+Convertio：文件转换
+
+
+5118.com： 找数据
+
+
+officeplus：办公模板
+
+
+        document.querySelectorAll('.github-emoji')
+      
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-30
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-14
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -981,11 +846,12 @@ nginx提供两种限流的方式：
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/nginx/">
-                        <span class="chip bg-color">nginx</span>
+                    <a href="/tags/%E5%B7%A5%E5%85%B7/">
+                        <span class="chip bg-color">工具</span>
                     </a>
                     
                 </div>
@@ -999,31 +865,28 @@ nginx提供两种限流的方式：
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/11/29/nginx-de-san-da-gong-neng/">
+                <a href="/2020/12/10/mybatis-de-jia-gou-she-ji/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="nginx的三大功能">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="mybatis的架构设计">
                         
-                        <span class="card-title">nginx的三大功能</span>
+                        <span class="card-title">mybatis的架构设计</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-一个单机的Tomcat理论上最多能承载500个并发，Tomcat集群内部最多5个服务器，超过5个对于整个Tomcat服务器的性能来说是不升反降的
+                            1.架构图示
 
-
-单机的Nginx能够承载的最大并发量是50000
-
-1.负载均衡功能
-nginx作为负载
+(1) API接口层：提供给外部使用的接口 API，开发人员通过这些本地API来操纵数据库。接口层一接收 到 调用请求就会调用数据处理层来完成具体的数据处理。
+ MyBatis和数据库的交互有两种方式：
+ a. 使用传统的M
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-29
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-10
                             </span>
                         <span class="publish-author">
                             
@@ -1036,8 +899,8 @@ nginx作为负载
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/nginx/">
-                        <span class="chip bg-color">nginx</span>
+                    <a href="/tags/mybatis/">
+                        <span class="chip bg-color">mybatis</span>
                     </a>
                     
                 </div>

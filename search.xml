@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>各类实用网站</title>
+      <link href="/2020/12/14/ge-lei-shi-yong-wang-zhan/"/>
+      <url>/2020/12/14/ge-lei-shi-yong-wang-zhan/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>稿定设计： 批图</p></blockquote><blockquote><p>Convertio：文件转换</p></blockquote><blockquote><p>5118.com： 找数据</p></blockquote><blockquote><p>officeplus：办公模板</p></blockquote><script>        document.querySelectorAll('.github-emoji')          .forEach(el => {            if (!el.dataset.src) { return; }            const img = document.createElement('img');            img.style = 'display:none !important;';            img.src = el.dataset.src;            img.addEventListener('error', () => {              img.remove();              el.style.color = 'inherit';              el.style.backgroundImage = 'none';              el.style.background = 'none';            });            img.addEventListener('load', () => {              img.remove();            });            document.body.appendChild(img);          });      </script>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 工具 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mybatis的架构设计</title>
       <link href="/2020/12/10/mybatis-de-jia-gou-she-ji/"/>
       <url>/2020/12/10/mybatis-de-jia-gou-she-ji/</url>

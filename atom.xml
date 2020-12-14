@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2020-12-10T07:19:21.209Z</updated>
+  <updated>2020-12-14T06:56:20.355Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>各类实用网站</title>
+    <link href="http://aliyunceo.github.io/2020/12/14/ge-lei-shi-yong-wang-zhan/"/>
+    <id>http://aliyunceo.github.io/2020/12/14/ge-lei-shi-yong-wang-zhan/</id>
+    <published>2020-12-14T06:48:28.000Z</published>
+    <updated>2020-12-14T06:56:20.355Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;稿定设计： 批图&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Convertio：文件转换&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;5118.com：
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="工具" scheme="http://aliyunceo.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>mybatis的架构设计</title>
@@ -498,33 +530,6 @@
         
         
           &lt;h1 id=&quot;Euraka配置详解&quot;&gt;&lt;a href=&quot;#Euraka配置详解&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="SpringCloud" scheme="http://aliyunceo.github.io/tags/SpringCloud/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring Cloud概述</title>
-    <link href="http://aliyunceo.github.io/2020/08/10/spring-cloud-gai-shu/"/>
-    <id>http://aliyunceo.github.io/2020/08/10/spring-cloud-gai-shu/</id>
-    <published>2020-08-10T07:18:30.000Z</published>
-    <updated>2020-08-10T15:47:08.516Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;1-微服务架构&quot;&gt;&lt;a href=&quot;#1-微服务架构&quot; class=&quot;headerlink&quot; title=&quot;1.微服务架构&quot;&gt;&lt;/a&gt;1.微服务架构&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;微服务架构的演变&lt;/p&gt;
-&lt;p&gt;&lt;img
         
       
     
