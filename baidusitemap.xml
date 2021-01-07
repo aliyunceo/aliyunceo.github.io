@@ -1,11 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://aliyunceo.github.io/2020/12/21/spring-ji-chu/</loc>
-    <lastmod>2020-12-22</lastmod>
+    <loc>http://aliyunceo.github.io/2021/01/07/springmvc-yuan-ma-fen-xi/</loc>
+    <lastmod>2021-01-07</lastmod>
+  </url>
+  <url>
+    <loc>http://aliyunceo.github.io/2020/12/22/shou-xie-ioc-he-aop/</loc>
+    <lastmod>2020-12-24</lastmod>
   </url>
   <url>
     <loc>http://aliyunceo.github.io/2020/12/21/dui-ioc-he-aop-de-tan-jiu/</loc>
+    <lastmod>2020-12-22</lastmod>
+  </url>
+  <url>
+    <loc>http://aliyunceo.github.io/2020/12/21/spring-ji-chu/</loc>
     <lastmod>2020-12-22</lastmod>
   </url>
   <url>
