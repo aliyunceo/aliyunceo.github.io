@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2021-01-07T15:40:49.394Z</updated>
+  <updated>2021-01-09T05:00:26.668Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SpringMVC之SSM整合</title>
+    <link href="http://aliyunceo.github.io/2021/01/08/springmvc-zhi-ssm-zheng-he/"/>
+    <id>http://aliyunceo.github.io/2021/01/08/springmvc-zhi-ssm-zheng-he/</id>
+    <published>2021-01-08T00:33:10.000Z</published>
+    <updated>2021-01-09T05:00:26.668Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-整合策略&quot;&gt;&lt;a href=&quot;#1-整合策略&quot; class=&quot;headerlink&quot; title=&quot;1.整合策略&quot;&gt;&lt;/a&gt;1.整合策略&lt;/h4&gt;&lt;p&gt;先整合Spring和mybatis，在整合SpringMVC&lt;/p&gt;
+&lt;h4
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="SpringMVC" scheme="http://aliyunceo.github.io/tags/SpringMVC/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SpringMVC源码分析</title>
     <link href="http://aliyunceo.github.io/2021/01/07/springmvc-yuan-ma-fen-xi/"/>
     <id>http://aliyunceo.github.io/2021/01/07/springmvc-yuan-ma-fen-xi/</id>
     <published>2021-01-07T02:33:24.000Z</published>
-    <updated>2021-01-07T15:40:49.394Z</updated>
+    <updated>2021-01-09T04:59:57.961Z</updated>
     
     <summary type="html">
     
@@ -510,31 +536,6 @@
     
     
       <category term="oracle" scheme="http://aliyunceo.github.io/tags/oracle/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Tapestry的开发详情</title>
-    <link href="http://aliyunceo.github.io/2020/10/14/tapestry-de-kai-fa-xiang-qing/"/>
-    <id>http://aliyunceo.github.io/2020/10/14/tapestry-de-kai-fa-xiang-qing/</id>
-    <published>2020-10-14T00:44:39.000Z</published>
-    <updated>2020-10-14T02:17:34.906Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h2 id=&quot;一、Tapestry流程分析和组件介绍&quot;&gt;&lt;a href=&quot;#一、Tapestry流程分析和组件介绍&quot; class=&quot;headerlink&quot; title=&quot;一、Tapestry流程分析和组件介绍&quot;&gt;&lt;/a&gt;一、Tapestry流程分析和组件介绍&lt;/h2&gt;&lt;p&gt;​
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="Tapestry" scheme="http://aliyunceo.github.io/tags/Tapestry/"/>
     
   </entry>
   
