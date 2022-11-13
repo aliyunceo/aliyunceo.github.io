@@ -2,6 +2,62 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://aliyunceo.github.io/2022/11/13/chu-shi-oauth2/</loc>
+    
+    <lastmod>2022-11-13</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aliyunceo.github.io/2021/03/24/dui-ddd-jia-gou-de-tan-jiu/</loc>
+    
+    <lastmod>2021-03-24</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aliyunceo.github.io/2021/01/09/springboot-ji-chu/</loc>
+    
+    <lastmod>2021-01-12</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aliyunceo.github.io/2021/01/09/springboot-zhi-huan-cun-guan-li/</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aliyunceo.github.io/2021/01/09/springboot-zhi-shi-tu-ji-zhu/</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aliyunceo.github.io/2021/01/09/springboot-zhi-shu-ju-fang-wen/</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aliyunceo.github.io/2021/01/09/springboot-yuan-ma-shen-du-pou-xi/</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://aliyunceo.github.io/2021/01/09/shen-ru-springboot-yuan-li/</loc>
+    
+    <lastmod>2021-01-09</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://aliyunceo.github.io/2021/01/08/springmvc-zhi-ssm-zheng-he/</loc>
     
     <lastmod>2021-01-09</lastmod>
@@ -263,7 +319,7 @@
 
   <url>
     <loc>http://aliyunceo.github.io/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -271,105 +327,119 @@
   
   <url>
     <loc>http://aliyunceo.github.io/tags/sql/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/SpringCloud/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/RabbitMQ/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/SpringMVC/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/Tapestry/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/mybatis/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/lua/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/nginx/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/canal/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/spring/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/Oracle/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/oracle/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/%E7%BC%93%E5%AD%98/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://aliyunceo.github.io/tags/svn/</loc>
-    <lastmod>2021-01-09</lastmod>
+    <lastmod>2022-11-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://aliyunceo.github.io/tags/SpringBoot/</loc>
+    <lastmod>2022-11-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://aliyunceo.github.io/tags/DDD/</loc>
+    <lastmod>2022-11-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

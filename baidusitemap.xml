@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://aliyunceo.github.io/2022/11/13/chu-shi-oauth2/</loc>
+    <lastmod>2022-11-13</lastmod>
+  </url>
+  <url>
+    <loc>http://aliyunceo.github.io/2021/03/24/dui-ddd-jia-gou-de-tan-jiu/</loc>
+    <lastmod>2021-03-24</lastmod>
+  </url>
+  <url>
+    <loc>http://aliyunceo.github.io/2021/01/09/springboot-ji-chu/</loc>
+    <lastmod>2021-01-12</lastmod>
+  </url>
+  <url>
+    <loc>http://aliyunceo.github.io/2021/01/09/springboot-zhi-huan-cun-guan-li/</loc>
+    <lastmod>2021-01-09</lastmod>
+  </url>
+  <url>
+    <loc>http://aliyunceo.github.io/2021/01/09/springboot-zhi-shi-tu-ji-zhu/</loc>
+    <lastmod>2021-01-09</lastmod>
+  </url>
+  <url>
+    <loc>http://aliyunceo.github.io/2021/01/09/springboot-zhi-shu-ju-fang-wen/</loc>
+    <lastmod>2021-01-09</lastmod>
+  </url>
+  <url>
+    <loc>http://aliyunceo.github.io/2021/01/09/springboot-yuan-ma-shen-du-pou-xi/</loc>
+    <lastmod>2021-01-09</lastmod>
+  </url>
+  <url>
+    <loc>http://aliyunceo.github.io/2021/01/09/shen-ru-springboot-yuan-li/</loc>
+    <lastmod>2021-01-09</lastmod>
+  </url>
+  <url>
     <loc>http://aliyunceo.github.io/2021/01/08/springmvc-zhi-ssm-zheng-he/</loc>
     <lastmod>2021-01-09</lastmod>
   </url>

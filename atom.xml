@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2021-01-09T05:00:26.668Z</updated>
+  <updated>2022-11-13T11:53:52.209Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -15,6 +15,222 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>初识Oauth2</title>
+    <link href="http://aliyunceo.github.io/2022/11/13/chu-shi-oauth2/"/>
+    <id>http://aliyunceo.github.io/2022/11/13/chu-shi-oauth2/</id>
+    <published>2022-11-13T11:53:52.000Z</published>
+    <updated>2022-11-13T11:53:52.209Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>对DDD架构的探究</title>
+    <link href="http://aliyunceo.github.io/2021/03/24/dui-ddd-jia-gou-de-tan-jiu/"/>
+    <id>http://aliyunceo.github.io/2021/03/24/dui-ddd-jia-gou-de-tan-jiu/</id>
+    <published>2021-03-24T09:17:13.000Z</published>
+    <updated>2021-03-24T12:33:06.466Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="DDD" scheme="http://aliyunceo.github.io/tags/DDD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot之缓存管理</title>
+    <link href="http://aliyunceo.github.io/2021/01/09/springboot-zhi-huan-cun-guan-li/"/>
+    <id>http://aliyunceo.github.io/2021/01/09/springboot-zhi-huan-cun-guan-li/</id>
+    <published>2021-01-09T13:43:04.000Z</published>
+    <updated>2021-01-09T13:43:04.279Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot之视图技术</title>
+    <link href="http://aliyunceo.github.io/2021/01/09/springboot-zhi-shi-tu-ji-zhu/"/>
+    <id>http://aliyunceo.github.io/2021/01/09/springboot-zhi-shi-tu-ji-zhu/</id>
+    <published>2021-01-09T13:42:30.000Z</published>
+    <updated>2021-01-09T13:42:30.339Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>“SpSpringBoot之数据访问</title>
+    <link href="http://aliyunceo.github.io/2021/01/09/springboot-zhi-shu-ju-fang-wen/"/>
+    <id>http://aliyunceo.github.io/2021/01/09/springboot-zhi-shu-ju-fang-wen/</id>
+    <published>2021-01-09T13:42:05.000Z</published>
+    <updated>2021-01-09T13:42:05.747Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot源码深度剖析</title>
+    <link href="http://aliyunceo.github.io/2021/01/09/springboot-yuan-ma-shen-du-pou-xi/"/>
+    <id>http://aliyunceo.github.io/2021/01/09/springboot-yuan-ma-shen-du-pou-xi/</id>
+    <published>2021-01-09T13:40:24.000Z</published>
+    <updated>2021-01-09T13:40:24.829Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>深入SpringBoot原理</title>
+    <link href="http://aliyunceo.github.io/2021/01/09/shen-ru-springboot-yuan-li/"/>
+    <id>http://aliyunceo.github.io/2021/01/09/shen-ru-springboot-yuan-li/</id>
+    <published>2021-01-09T13:39:35.000Z</published>
+    <updated>2021-01-09T13:39:35.264Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;script&gt;
+        document.querySelectorAll(&#39;.github-emoji&#39;)
+          .forEach(el =&gt; {
+            if (!el.dataset.src) { return; }
+       
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>SpringBoot基础</title>
+    <link href="http://aliyunceo.github.io/2021/01/09/springboot-ji-chu/"/>
+    <id>http://aliyunceo.github.io/2021/01/09/springboot-ji-chu/</id>
+    <published>2021-01-09T13:38:36.000Z</published>
+    <updated>2021-01-12T05:32:05.915Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;1-什么是约定由于配置&quot;&gt;&lt;a href=&quot;#1-什么是约定由于配置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="SpringBoot" scheme="http://aliyunceo.github.io/tags/SpringBoot/"/>
+    
+  </entry>
   
   <entry>
     <title>SpringMVC之SSM整合</title>
@@ -324,218 +540,6 @@
     
     
       <category term="mybatis" scheme="http://aliyunceo.github.io/tags/mybatis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>自定义持久层框架</title>
-    <link href="http://aliyunceo.github.io/2020/12/05/zi-ding-yi-chi-jiu-ceng-kuang-jia/"/>
-    <id>http://aliyunceo.github.io/2020/12/05/zi-ding-yi-chi-jiu-ceng-kuang-jia/</id>
-    <published>2020-12-05T06:35:33.000Z</published>
-    <updated>2020-12-07T14:59:29.833Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;自定义持久层框架&quot;&gt;&lt;a href=&quot;#自定义持久层框架&quot; class=&quot;headerlink&quot; title=&quot;自定义持久层框架&quot;&gt;&lt;/a&gt;自定义持久层框架&lt;/h1&gt;&lt;h3 id=&quot;1-对JDBC的操作问题进行分析&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="mybatis" scheme="http://aliyunceo.github.io/tags/mybatis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>jdbc与mybatis</title>
-    <link href="http://aliyunceo.github.io/2020/12/02/jdbc-yu-mybatis/"/>
-    <id>http://aliyunceo.github.io/2020/12/02/jdbc-yu-mybatis/</id>
-    <published>2020-12-02T14:24:10.000Z</published>
-    <updated>2020-12-02T14:55:36.615Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h4 id=&quot;1-ORM&quot;&gt;&lt;a href=&quot;#1-ORM&quot; class=&quot;headerlink&quot; title=&quot;1.ORM&quot;&gt;&lt;/a&gt;1.ORM&lt;/h4&gt;&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;ORM(Object Relational Mapping)：
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="mybatis" scheme="http://aliyunceo.github.io/tags/mybatis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>springboot和canal集成包的安装</title>
-    <link href="http://aliyunceo.github.io/2020/12/01/springboot-he-canal-ji-cheng-bao-de-an-zhuang/"/>
-    <id>http://aliyunceo.github.io/2020/12/01/springboot-he-canal-ji-cheng-bao-de-an-zhuang/</id>
-    <published>2020-12-01T02:16:24.000Z</published>
-    <updated>2020-12-01T10:33:41.648Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;当用户执行数据库的操作的时候，binlog
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="canal" scheme="http://aliyunceo.github.io/tags/canal/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>nginx限流</title>
-    <link href="http://aliyunceo.github.io/2020/11/30/nginx-xian-liu/"/>
-    <id>http://aliyunceo.github.io/2020/11/30/nginx-xian-liu/</id>
-    <published>2020-11-30T13:59:41.000Z</published>
-    <updated>2020-11-30T14:10:16.858Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;nginx限流的方式&lt;/p&gt;
-&lt;p&gt;一般情况下，首页的并发量是比较大的，即使有了多级缓存，如果有大量恶意的请求，也会对系统造成影响。而限流就是保护措施之一。&lt;/p&gt;
-&lt;p&gt;nginx提供两种限流的方式：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;一是控制速率&lt;/li&gt;
-&lt;li&gt;二是控制并发
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="nginx" scheme="http://aliyunceo.github.io/tags/nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>缓存预热+二级缓存查询</title>
-    <link href="http://aliyunceo.github.io/2020/11/30/huan-cun-yu-re-er-ji-huan-cun-cha-xun/"/>
-    <id>http://aliyunceo.github.io/2020/11/30/huan-cun-yu-re-er-ji-huan-cun-cha-xun/</id>
-    <published>2020-11-30T13:30:49.000Z</published>
-    <updated>2020-11-30T14:21:08.382Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;1-实现缓存预热和二级缓存查询&quot;&gt;&lt;a href=&quot;#1-实现缓存预热和二级缓存查询&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="缓存" scheme="http://aliyunceo.github.io/tags/%E7%BC%93%E5%AD%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>nginx的三大功能</title>
-    <link href="http://aliyunceo.github.io/2020/11/29/nginx-de-san-da-gong-neng/"/>
-    <id>http://aliyunceo.github.io/2020/11/29/nginx-de-san-da-gong-neng/</id>
-    <published>2020-11-29T12:18:53.000Z</published>
-    <updated>2020-11-29T12:47:22.160Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;一个单机的Tomcat理论上最多能承载500个并发，Tomcat集群内部最多5个服务器，超过5个对于整个Tomcat服务器的性能来说是不升反降的&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;blockquote&gt;
-&lt;p&gt;单机的Nginx能够承载的最大并发
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="nginx" scheme="http://aliyunceo.github.io/tags/nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>lua基础知识总结</title>
-    <link href="http://aliyunceo.github.io/2020/11/28/lua-ji-chu-zhi-shi-zong-jie/"/>
-    <id>http://aliyunceo.github.io/2020/11/28/lua-ji-chu-zhi-shi-zong-jie/</id>
-    <published>2020-11-28T12:56:01.000Z</published>
-    <updated>2020-11-28T14:00:05.452Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;1-lua是什么&quot;&gt;&lt;a href=&quot;#1-lua是什么&quot; class=&quot;headerlink&quot; title=&quot;1.lua是什么&quot;&gt;&lt;/a&gt;1.lua是什么&lt;/h3&gt;&lt;p&gt;Lua 是一个小巧的&lt;a
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="lua" scheme="http://aliyunceo.github.io/tags/lua/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>对Navicat Premium连接Oracle时报错，提示信息oracle library is not loaded的问题的解决方案</title>
-    <link href="http://aliyunceo.github.io/2020/10/22/dui-navicat-premium-lian-jie-oracle-shi-bao-cuo-ti-shi-xin-xi-oracle-library-is-not-loaded-de-wen-ti-de-jie-jue-fang-an/"/>
-    <id>http://aliyunceo.github.io/2020/10/22/dui-navicat-premium-lian-jie-oracle-shi-bao-cuo-ti-shi-xin-xi-oracle-library-is-not-loaded-de-wen-ti-de-jie-jue-fang-an/</id>
-    <published>2020-10-22T08:28:11.000Z</published>
-    <updated>2020-11-28T13:56:27.051Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;对Navicat Premium连接Oracle时报错，提示信息oracle library is not loaded的问题的解决方案&lt;/p&gt;
-&lt;p&gt;解决方案：配置Navicat Premium的环境，具体方法如下：&lt;/p&gt;
-&lt;p&gt;1.打开&lt;a
-        
-      
-    
-    </summary>
-    
-    
-    
-      <category term="oracle" scheme="http://aliyunceo.github.io/tags/oracle/"/>
     
   </entry>
   
