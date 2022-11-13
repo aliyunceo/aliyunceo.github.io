@@ -444,6 +444,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>http://aliyunceo.github.io/tags/OAuth2/</loc>
+    <lastmod>2022-11-13</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
 </urlset>

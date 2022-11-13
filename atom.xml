@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2022-11-13T11:53:52.209Z</updated>
+  <updated>2022-11-13T12:37:50.643Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://aliyunceo.github.io/2022/11/13/chu-shi-oauth2/"/>
     <id>http://aliyunceo.github.io/2022/11/13/chu-shi-oauth2/</id>
     <published>2022-11-13T11:53:52.000Z</published>
-    <updated>2022-11-13T11:53:52.209Z</updated>
+    <updated>2022-11-13T12:37:50.643Z</updated>
     
     <summary type="html">
     
@@ -29,17 +29,16 @@
       
         
         
-          &lt;script&gt;
-        document.querySelectorAll(&#39;.github-emoji&#39;)
-          .forEach(el =&gt; {
-            if (!el.dataset.src) { return; }
-       
+          &lt;p&gt;一、什么是Oauth2？&lt;/p&gt;
+&lt;p&gt;OAuth 是一个开放标准，该标准允许用户让第三方应用访问该用户在某一网站上存储的私密资源 （如头像、照片、视频等），并且在这个过程中无须将用户名和密码提供给第三方应用。通过令牌 （token）
         
       
     
     </summary>
     
     
+    
+      <category term="OAuth2" scheme="http://aliyunceo.github.io/tags/OAuth2/"/>
     
   </entry>
   
