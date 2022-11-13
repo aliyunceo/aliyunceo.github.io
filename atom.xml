@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://aliyunceo.github.io/"/>
-  <updated>2022-11-13T12:46:04.429Z</updated>
+  <updated>2022-11-13T15:16:43.638Z</updated>
   <id>http://aliyunceo.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>初识Oauth2</title>
-    <link href="http://aliyunceo.github.io/2022/11/13/oauth2-chu-shi/"/>
-    <id>http://aliyunceo.github.io/2022/11/13/oauth2-chu-shi/</id>
-    <published>2022-11-13T11:53:52.000Z</published>
-    <updated>2022-11-13T12:46:04.429Z</updated>
+    <title>初识OAuth2</title>
+    <link href="http://aliyunceo.github.io/2022/11/12/chu-shi-oauth2/"/>
+    <id>http://aliyunceo.github.io/2022/11/12/chu-shi-oauth2/</id>
+    <published>2022-11-12T14:10:34.000Z</published>
+    <updated>2022-11-13T15:16:43.638Z</updated>
     
     <summary type="html">
     
@@ -37,7 +37,7 @@
     
     
     
-      <category term="OAuth2" scheme="http://aliyunceo.github.io/tags/OAuth2/"/>
+      <category term="认证" scheme="http://aliyunceo.github.io/tags/%E8%AE%A4%E8%AF%81/"/>
     
   </entry>
   
